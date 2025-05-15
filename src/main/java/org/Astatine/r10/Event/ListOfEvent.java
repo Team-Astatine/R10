@@ -59,8 +59,7 @@ import org.Astatine.r10.Event.Restricted.Function.Event.EntityExplode.Restricted
 import org.Astatine.r10.Event.Restricted.Function.Event.FromMaceHitDamage.RestrictedItemDamageFromMace;
 import org.Astatine.r10.Event.Restricted.Function.TotemStack.RestrictedShulkerChest;
 import org.Astatine.r10.Event.Restricted.Function.TotemStack.RestrictedStackingTotemInteraction;
-import org.Astatine.r10.Event.UserInterface.Function.Executor.UICloser;
-import org.Astatine.r10.Event.UserInterface.Function.Executor.UIExecutor;
+import org.Astatine.r10.Event.UserInterface.Function.UIEventSwitcher;
 import org.Astatine.r10.Event.UserInterface.Menu.MainMenuUI;
 
 /**
@@ -185,13 +184,13 @@ public class ListOfEvent implements Listener {
         new UpdateEnhanceResultItemLoreFromGrindStone(event);
 
 //        User Interface
-        new UIExecutor(event);
+        new UIEventSwitcher(event);
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void InventoryCloseEvent(InventoryCloseEvent event) {
 //        User Interface
-        new UICloser(event);
+        new UIEventSwitcher(event);
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
