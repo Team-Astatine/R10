@@ -2,7 +2,7 @@ package org.Astatine.r10.Event.Enhance.Processor;
 
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import teamzesa.Event.Enhance.Interface.EnhanceUtil;
+import org.Astatine.r10.Event.Enhance.Interface.EnhanceUtil;
 
 /**
  * {@link EnhanceItem} 강화용 아이템을 만듭니다.

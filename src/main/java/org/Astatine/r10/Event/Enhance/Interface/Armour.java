@@ -1,7 +1,7 @@
 package org.Astatine.r10.Event.Enhance.Interface;
 
 import org.bukkit.Material;
-import teamzesa.Event.Enhance.Enumeration.Armour.ArmourList;
+import org.Astatine.r10.Event.Enhance.Enumeration.Armour.ArmourList;
 
 /**
  * 방어구 아이템을 강화 아이템을 정의합니다.

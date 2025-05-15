@@ -6,9 +6,9 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.Event.EventRegister;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 public class RestrictedStackingTotemInteraction extends StringComponentExchanger implements EventRegister {
 

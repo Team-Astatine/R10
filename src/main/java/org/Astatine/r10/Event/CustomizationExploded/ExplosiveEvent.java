@@ -4,7 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.WitherSkull;
 import org.bukkit.event.entity.EntityExplodeEvent;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Event.EventRegister;
 
 public class ExplosiveEvent implements EventRegister {
     private Location location;

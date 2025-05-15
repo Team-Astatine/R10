@@ -1,5 +1,5 @@
 name: R10
-version: '8.4'
+version: '1.0.0'
 main: org.Astatine.r10.R10
 api-version: '1.21.4'
 authors: [JAXPLE]
@@ -9,11 +9,11 @@ permissions:
   SpeedLimit.bypass:
     description: Bypass the speed limit
     default: op
-  R01.DataControl:
-    description: R01 Project에 모든 Data를 Export, Import 할 수 있습니다.
+  R10.DataControl:
+    description: R10 Project에 모든 Data를 Export, Import 할 수 있습니다.
     default: op
-  R01.ItemControl:
-    description: R01 Project에 모든 Item 관련 명령어를 수행할 수 있습니다.
+  R10.ItemControl:
+    description: R10 Project에 모든 Item 관련 명령어를 수행할 수 있습니다.
     default: op
 
 commands:
@@ -50,31 +50,31 @@ commands:
 
   Motd:
     description: Motd를 설정합니다.
-    permission: R01.DataControl
+    permission: R10.DataControl
   ExportDataFile:
-    description: R01프로젝트에 모든 Object가 Export 됩니다.
-    permission: R01.DataControl
+    description: R10프로젝트에 모든 Object가 Export 됩니다.
+    permission: R10.DataControl
   RemoveDuplicateData:
     description: UserData에 중복 이름을 삭제합니다.
-    permission: R01.DataControl
+    permission: R10.DataControl
   setHealth:
     description: 체력을 초기화 합니다.
-    permission: R01.DataControl
+    permission: R10.DataControl
   god:
     description: 무적을 활성화 합니다.
-    permission: R01.DataControl
+    permission: R10.DataControl
   dataFileReload:
     description: config 을 Reload 합니다.
-    permission: R01.DataControl
+    permission: R10.DataControl
   vo:
     description: DebugValue
-    permission: R01.ItemControl
+    permission: R10.ItemControl
   vi:
     description: DebugItemValue
-    permission: R01.ItemControl
+    permission: R10.ItemControl
   enhance:
     description: 강화를 설정합니다.
-    permission: R01.ItemControl
+    permission: R10.ItemControl
   setKillCount:
     description: 킬 카운트를 설정합니다.
-    permission: R01.ItemControl
+    permission: R10.ItemControl

@@ -4,9 +4,9 @@ import org.apache.commons.lang3.BooleanUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.util.Vector;
-import teamzesa.Data.User.UserData.User;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Data.User.UserData.User;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Event.EventRegister;
 
 public class GodModeTridentShotEvent implements EventRegister {
     private final ProjectileLaunchEvent event;

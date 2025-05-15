@@ -1,6 +1,8 @@
 package org.Astatine.r10.Data.DataIO.Config;
 
 import org.Astatine.r10.Data.DataIO.User.DataFile;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 

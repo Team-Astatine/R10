@@ -3,7 +3,7 @@ package org.Astatine.r10.Event.Enhance.Enumeration;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.apache.commons.lang3.BooleanUtils;
-import teamzesa.Enumeration.Type.ColorType;
+import org.Astatine.r10.Enumeration.Type.ColorType;
 
 import java.util.Arrays;
 import java.util.Map;

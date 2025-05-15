@@ -3,7 +3,7 @@ package org.Astatine.r10.Event.Restricted.Function.Event.EntityExplode;
 import org.bukkit.damage.DamageType;
 import org.bukkit.entity.Entity;
 import org.bukkit.event.entity.EntityDamageEvent;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Event.EventRegister;
 
 public class RestrictedExplosiveDamageManager implements EventRegister {
     private Entity restrictedEntity;

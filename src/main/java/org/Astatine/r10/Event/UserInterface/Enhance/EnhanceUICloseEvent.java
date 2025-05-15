@@ -4,8 +4,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.ItemStack;
-import teamzesa.Event.EventRegister;
-import teamzesa.Event.UserInterface.Function.Interface.UIHolder;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
 
 import java.util.Arrays;
 import java.util.List;

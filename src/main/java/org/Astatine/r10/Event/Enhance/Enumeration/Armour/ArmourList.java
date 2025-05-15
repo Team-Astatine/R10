@@ -3,7 +3,7 @@ package org.Astatine.r10.Event.Enhance.Enumeration.Armour;
 import org.apache.commons.lang3.BooleanUtils;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import teamzesa.Event.Enhance.Interface.Armour;
+import org.Astatine.r10.Event.Enhance.Interface.Armour;
 
 import java.util.Arrays;
 import java.util.EnumMap;

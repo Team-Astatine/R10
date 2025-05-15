@@ -3,11 +3,11 @@ package org.Astatine.r10.Event.PlayerInteraction.PlayerStatus.PlayerDeathEvent;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Data.User.UserKillStatus.UserKillStatus;
-import teamzesa.Data.User.UserKillStatus.UserKillStatusBuilder;
-import teamzesa.Data.User.UserKillStatus.UserKillStatusController;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatus;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatusBuilder;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatusController;
+import org.Astatine.r10.Event.EventRegister;
 
 public class IncreaseKillCountHandler implements EventRegister {
     private UserKillStatusController controller = new UserKillStatusController();

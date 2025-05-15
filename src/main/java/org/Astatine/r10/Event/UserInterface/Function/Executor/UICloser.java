@@ -2,10 +2,10 @@ package org.Astatine.r10.Event.UserInterface.Function.Executor;
 
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.event.inventory.InventoryCloseEvent;
-import teamzesa.Event.UserInterface.Enhance.EnhanceUICloseEvent;
-import teamzesa.Event.UserInterface.Function.Interface.Type;
-import teamzesa.Event.UserInterface.Function.Interface.UIHolder;
-import teamzesa.Event.UserInterface.Function.Interface.UIType;
+import org.Astatine.r10.Event.UserInterface.Enhance.EnhanceUICloseEvent;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.Type;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.UIType;
 
 public class UICloser {
 

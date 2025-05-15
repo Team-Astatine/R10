@@ -5,10 +5,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Data.DataIO.Config.ConfigIOHandler;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.command.CommandRegisterSection;
-import teamzesa.command.ListOfCommand;
+import org.Astatine.r10.Data.DataIO.Config.ConfigIOHandler;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.command.CommandRegisterSection;
+import org.Astatine.r10.command.ListOfCommand;
 
 
 public class SetMotd extends CommandRegisterSection {

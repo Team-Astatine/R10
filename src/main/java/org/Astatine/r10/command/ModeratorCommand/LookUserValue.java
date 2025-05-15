@@ -5,13 +5,13 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Data.User.UserData.User;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Data.User.UserKillStatus.UserKillStatus;
-import teamzesa.Data.User.UserKillStatus.UserKillStatusController;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.command.CommandRegisterSection;
-import teamzesa.command.ListOfCommand;
+import org.Astatine.r10.Data.User.UserData.User;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatus;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatusController;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.command.CommandRegisterSection;
+import org.Astatine.r10.command.ListOfCommand;
 
 import java.util.Optional;
 

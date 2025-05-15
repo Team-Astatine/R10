@@ -1,5 +1,6 @@
 package org.Astatine.r10.command;
 
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

@@ -6,9 +6,9 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import teamzesa.Event.Enhance.Interface.EnhanceUtil;
-import teamzesa.Event.EventRegister;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Event.Enhance.Interface.EnhanceUtil;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 public class UpdateEnhanceResultItemLoreFromGrindStone extends StringComponentExchanger implements EventRegister {
     private ItemStack resultItem;

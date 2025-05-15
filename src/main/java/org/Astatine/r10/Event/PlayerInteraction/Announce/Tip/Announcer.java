@@ -1,17 +1,17 @@
 package org.Astatine.r10.Event.PlayerInteraction.Announce.Tip;
 
 import net.kyori.adventure.audience.Audience;
+import org.Astatine.r10.R10;
 import org.bukkit.Bukkit;
 import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Data.DataIO.Config.ConfigIOHandler;
-import teamzesa.Data.User.UserData.User;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.R01;
-import teamzesa.Util.Function.StringComponentExchanger;
-import teamzesa.Util.Function.ThreadPool;
+import org.Astatine.r10.Data.DataIO.Config.ConfigIOHandler;
+import org.Astatine.r10.Data.User.UserData.User;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Util.Function.ThreadPool;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +74,7 @@ public class Announcer extends StringComponentExchanger {
                         User user = new UserController().readUser(player.getUniqueId());
                         if (user.announcingSkip())
                             Bukkit.getScheduler().runTask(
-                                    R01.getPlugin(R01.class),
+                                    R10.getPlugin(R10.class),
                                     ()-> player.performCommand("help"));
                     });
                 },

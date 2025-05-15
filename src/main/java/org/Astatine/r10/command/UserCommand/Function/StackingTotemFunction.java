@@ -1,5 +1,8 @@
 package org.Astatine.r10.command.UserCommand.Function;
 
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.command.CommandRegisterSection;
+import org.Astatine.r10.command.ListOfCommand;
 import org.apache.commons.lang3.BooleanUtils;
 import org.bukkit.Material;
 import org.bukkit.command.Command;

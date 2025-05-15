@@ -5,14 +5,14 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.Event.UserInterface.Function.Interface.Type;
-import teamzesa.Event.UserInterface.Function.Interface.UIHolder;
-import teamzesa.Event.UserInterface.Function.Interface.UIType;
-import teamzesa.Event.UserInterface.Function.UIGenerator.CreatePanelItem;
-import teamzesa.Event.UserInterface.Function.UIGenerator.InventoryUIGenerator;
-import teamzesa.Event.UserInterface.Function.UIGenerator.SlotItemMapping;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.Type;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.UIType;
+import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.CreatePanelItem;
+import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.InventoryUIGenerator;
+import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.SlotItemMapping;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 import java.util.ArrayList;
 

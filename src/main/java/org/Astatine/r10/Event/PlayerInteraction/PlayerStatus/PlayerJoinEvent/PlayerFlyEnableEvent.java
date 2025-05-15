@@ -6,11 +6,11 @@ import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
-import teamzesa.Data.User.UserData.User;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.Event.EventRegister;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Data.User.UserData.User;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 public class PlayerFlyEnableEvent extends StringComponentExchanger implements EventRegister {
     private Player player;

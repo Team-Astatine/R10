@@ -3,11 +3,11 @@ package org.Astatine.r10.Event.Enhance.Processor;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.Material;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.Event.Enhance.Enumeration.Scroll.ProtectScrollList;
-import teamzesa.Event.Enhance.Enumeration.Scroll.ScrollList;
-import teamzesa.Event.Enhance.Interface.EnhanceUtil;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Event.Enhance.Enumeration.Scroll.ProtectScrollList;
+import org.Astatine.r10.Event.Enhance.Enumeration.Scroll.ScrollList;
+import org.Astatine.r10.Event.Enhance.Interface.EnhanceUtil;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 public class EnhanceItemExecutor extends StringComponentExchanger {
     private final int LOW_LEVEL = 0;

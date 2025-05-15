@@ -5,9 +5,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.command.CommandRegisterSection;
-import teamzesa.command.ListOfCommand;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.command.CommandRegisterSection;
+import org.Astatine.r10.command.ListOfCommand;
 
 
 public class LookUserMainHandItem extends CommandRegisterSection {

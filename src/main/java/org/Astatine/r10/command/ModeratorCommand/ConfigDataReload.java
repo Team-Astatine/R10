@@ -6,12 +6,12 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Data.User.UserData.User;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.R01;
-import teamzesa.command.CommandRegisterSection;
-import teamzesa.command.ListOfCommand;
+import org.Astatine.r10.Data.User.UserData.User;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.R10;
+import org.Astatine.r10.command.CommandRegisterSection;
+import org.Astatine.r10.command.ListOfCommand;
 
 import java.util.Optional;
 
@@ -50,14 +50,14 @@ public class ConfigDataReload extends CommandRegisterSection {
         }
 
         sendComment();
-        R01.getPlugin(R01.class).configFileLoader();
+        R10.getPlugin(R10.class).configFileLoader();
         return true;
     }
 
     private void sendComment() {
         String comment = "Reload Done";
         if (this.consoleSend)
-            Bukkit.getLogger().info("[R01] " + comment);
+            Bukkit.getLogger().info("[R10] " + comment);
         else playerSendMsgComponentExchanger(this.player, comment, ColorType.YELLOW);
     }
 }

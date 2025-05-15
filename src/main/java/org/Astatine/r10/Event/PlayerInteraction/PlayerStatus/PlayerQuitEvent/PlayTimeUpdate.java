@@ -3,10 +3,10 @@ package org.Astatine.r10.Event.PlayerInteraction.PlayerStatus.PlayerQuitEvent;
 import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerQuitEvent;
-import teamzesa.Data.User.UserData.User;
-import teamzesa.Data.User.UserData.UserBuilder;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Data.User.UserData.User;
+import org.Astatine.r10.Data.User.UserData.UserBuilder;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Event.EventRegister;
 
 public class PlayTimeUpdate implements EventRegister {
 

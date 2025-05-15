@@ -1,5 +1,8 @@
 package org.Astatine.r10.command;
 
+import org.Astatine.r10.Event.UserInterface.Command.EnhanceTabOpen;
+import org.Astatine.r10.Event.UserInterface.Command.GSitTabOpen;
+import org.Astatine.r10.Event.UserInterface.Command.TpaTabOpen;
 import org.Astatine.r10.command.ModeratorCommand.*;
 import org.Astatine.r10.command.UserCommand.Announce.*;
 import org.Astatine.r10.command.UserCommand.Function.*;
@@ -14,7 +17,7 @@ import org.bukkit.command.CommandExecutor;
  * @see ListOfCommand 에 명령어 등록 및 명령 시 발생할 Instance 추가합니다.
  * @see CommandRegisterSection 을 extend하여 명령어 입력 시 execute 할 Instance를 추가합니다.
  *
- * @implSpec {@link R01} 에 registerCommandAndEvent() 함수에서 명령어를 일괄 등록합니다.
+ * @implSpec {@link R10} 에 registerCommandAndEvent() 함수에서 명령어를 일괄 등록합니다.
  */
 public enum ListOfCommand {
 //    User

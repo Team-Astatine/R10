@@ -2,13 +2,13 @@ package org.Astatine.r10.Event.UserInterface.Function.Executor;
 
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import teamzesa.Event.UserInterface.Enhance.EnhanceUIClickEvent;
-import teamzesa.Event.UserInterface.Function.Interface.Type;
-import teamzesa.Event.UserInterface.Function.Interface.UIHolder;
-import teamzesa.Event.UserInterface.Function.Interface.UIType;
-import teamzesa.Event.UserInterface.GSit.GSitUIClickEvent;
-import teamzesa.Event.UserInterface.Menu.MainMenuUIClickEvent;
-import teamzesa.Event.UserInterface.TPA.TpaUIClickEvent;
+import org.Astatine.r10.Event.UserInterface.Enhance.EnhanceUIClickEvent;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.Type;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.UIType;
+import org.Astatine.r10.Event.UserInterface.GSit.GSitUIClickEvent;
+import org.Astatine.r10.Event.UserInterface.Menu.MainMenuUIClickEvent;
+import org.Astatine.r10.Event.UserInterface.TPA.TpaUIClickEvent;
 
 /**
  * {@link Type} 각 UI 타입에 맞는 {@link org.bukkit.inventory.Inventory}를 생성하는 클래스입니다.

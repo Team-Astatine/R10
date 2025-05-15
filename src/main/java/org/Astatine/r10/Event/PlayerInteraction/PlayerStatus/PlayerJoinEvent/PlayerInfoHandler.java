@@ -6,13 +6,13 @@ import org.bukkit.Bukkit;
 import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerJoinEvent;
-import teamzesa.Data.User.UserData.User;
-import teamzesa.Data.User.UserData.UserBuilder;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Data.User.UserKillStatus.UserKillStatusController;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.Event.EventRegister;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Data.User.UserData.User;
+import org.Astatine.r10.Data.User.UserData.UserBuilder;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatusController;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 import java.util.Optional;
 

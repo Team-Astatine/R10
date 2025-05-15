@@ -4,10 +4,10 @@ import org.apache.commons.lang3.BooleanUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.CraftItemEvent;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.Event.EventRegister;
-import teamzesa.Event.Restricted.AntiExploit.RestrictedElement;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Event.Restricted.AntiExploit.RestrictedElement;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 public class RestrictedCraftItemEvent extends StringComponentExchanger implements EventRegister {
     private Material currentItemMaterial;

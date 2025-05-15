@@ -8,8 +8,8 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.ItemStack;
-import teamzesa.Event.Enhance.Enumeration.Weapon.ShortRange;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Event.Enhance.Enumeration.Weapon.ShortRange;
+import org.Astatine.r10.Event.EventRegister;
 
 public class EntityAttackSpeedHandler implements EventRegister {
     private Entity damagerEntity;
@@ -48,12 +48,12 @@ public class EntityAttackSpeedHandler implements EventRegister {
             hurtTick = 1;
 
 
-//        Bukkit.getScheduler().runTaskLater(R01.getPlugin(R01.class),
+//        Bukkit.getScheduler().runTaskLater(R10.getPlugin(R10.class),
 //                () -> targetEntity.setVelocity(targetEntity.getVelocity().multiply(hitDelay)), 1);
 
 //        final int tick = hurtTick;
 //        Bukkit.getScheduler().runTaskLater(
-//                R01.getPlugin(R01.class),
+//                R10.getPlugin(R10.class),
 //                () -> this.targetEntity.setMaximumNoDamageTicks(tick),
 //                0
 //        );

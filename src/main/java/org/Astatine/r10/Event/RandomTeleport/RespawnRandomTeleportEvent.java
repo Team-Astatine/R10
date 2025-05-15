@@ -6,9 +6,9 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerRespawnEvent;
-import teamzesa.Enumeration.Type.WorldType;
-import teamzesa.Event.EventRegister;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Enumeration.Type.WorldType;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 
 public class RespawnRandomTeleportEvent extends StringComponentExchanger implements EventRegister {

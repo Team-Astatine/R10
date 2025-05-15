@@ -3,10 +3,10 @@ package org.Astatine.r10.Event.UserInterface.Menu;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import teamzesa.Event.EventRegister;
-import teamzesa.Event.UserInterface.Function.Interface.UIHolder;
-import teamzesa.Util.Function.StringComponentExchanger;
-import teamzesa.command.ListOfCommand;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.command.ListOfCommand;
 
 public class MainMenuUIClickEvent extends StringComponentExchanger implements EventRegister {
     private UIHolder uiHolder;

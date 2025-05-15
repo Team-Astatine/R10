@@ -2,10 +2,10 @@ package org.Astatine.r10.Event.PlayerInteraction.Announce.Raid;
 
 import org.bukkit.Location;
 import org.bukkit.event.raid.RaidTriggerEvent;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.Enumeration.Type.WorldType;
-import teamzesa.Event.EventRegister;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Enumeration.Type.WorldType;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 public class RaidAnnouncerEvent extends StringComponentExchanger implements EventRegister {
     private Location location;

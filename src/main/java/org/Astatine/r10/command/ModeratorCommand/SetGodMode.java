@@ -9,12 +9,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Data.User.UserData.User;
-import teamzesa.Data.User.UserData.UserBuilder;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.command.CommandRegisterSection;
-import teamzesa.command.ListOfCommand;
+import org.Astatine.r10.Data.User.UserData.User;
+import org.Astatine.r10.Data.User.UserData.UserBuilder;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.command.CommandRegisterSection;
+import org.Astatine.r10.command.ListOfCommand;
 
 import java.util.Optional;
 
@@ -55,7 +55,7 @@ public class SetGodMode extends CommandRegisterSection {
             String comment = "해당 유저는 존재하지 않습니다.";
 
             if (this.consoleSend)
-                Bukkit.getLogger().info("[R01] " + comment);
+                Bukkit.getLogger().info("[R10] " + comment);
             else playerSendMsgComponentExchanger(senderPlayer, comment, ColorType.RED);
             return false;
         }
@@ -78,7 +78,7 @@ public class SetGodMode extends CommandRegisterSection {
         String comment = "은(는) 이제 " + targetStatus + " 입니다.";
 
         if (consoleSend)
-            Bukkit.getLogger().info("[R01] " + targetUser.nameList().getLast() + comment);
+            Bukkit.getLogger().info("[R10] " + targetUser.nameList().getLast() + comment);
 
         else if (ObjectUtils.notEqual(this.senderPlayer, targetPlayer))
             playerSendMsgComponentExchanger(this.senderPlayer, targetUser.nameList().getLast() + comment, ColorType.ORANGE);

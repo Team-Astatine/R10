@@ -8,11 +8,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.Event.Enhance.Enumeration.EnhanceItemAttributes;
-import teamzesa.Event.Enhance.Interface.EnhanceUtil;
-import teamzesa.command.CommandRegisterSection;
-import teamzesa.command.ListOfCommand;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Event.Enhance.Enumeration.EnhanceItemAttributes;
+import org.Astatine.r10.Event.Enhance.Interface.EnhanceUtil;
+import org.Astatine.r10.command.CommandRegisterSection;
+import org.Astatine.r10.command.ListOfCommand;
 
 import java.util.Map;
 

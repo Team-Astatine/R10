@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.inventory.ItemStack;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Event.EventRegister;
 
 public class RestrictedItemDamageFromMace implements EventRegister {
     private Player player;

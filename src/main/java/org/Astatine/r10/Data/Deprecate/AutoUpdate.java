@@ -39,15 +39,15 @@ public class AutoUpdate {
         gitUpdateCheck();
         localPluginCheck();
 
-        Bukkit.getLogger().info("[R01] Github Releases Version > " + gitVersion);
-        Bukkit.getLogger().info("[R01] Local Plugin Version > " + localVersion);
+        Bukkit.getLogger().info("[R10] Github Releases Version > " + gitVersion);
+        Bukkit.getLogger().info("[R10] Local Plugin Version > " + localVersion);
 
         if (gitVersion == localVersion) {
-            Bukkit.getLogger().info("[R01] 최신버전 입니다.");
+            Bukkit.getLogger().info("[R10] 최신버전 입니다.");
             return;
         }
         if (gitVersion > localVersion) {
-            Bukkit.getLogger().info("[R01] 구버전 입니다. 자동 업데이트 합니다.");
+            Bukkit.getLogger().info("[R10] 구버전 입니다. 자동 업데이트 합니다.");
 //            UserIOHandler.exportUserData("for Update plugin Version");
             installNewPlugin();
             removeLegacyPlugin();
@@ -58,8 +58,8 @@ public class AutoUpdate {
 
     private void installNewPlugin() {
         String gitVersionStr = Double.toString(gitVersion);
-        String fileName = "R01-" + gitVersionStr + ".jar";
-        String downloadLink = "https://github.com/JAXPLE/R01/releases/download/" + gitVersionStr + "/R01-" + gitVersionStr + ".jar";
+        String fileName = "R10-" + gitVersionStr + ".jar";
+        String downloadLink = "https://github.com/JAXPLE/R10/releases/download/" + gitVersionStr + "/R10-" + gitVersionStr + ".jar";
 
         try {
             URL url = new URL(downloadLink);
@@ -80,21 +80,21 @@ public class AutoUpdate {
 //        System.out.println(fileList);
         this.fileList.stream()
                 .filter(file ->
-                        file.getName().contains("R01-") &&
+                        file.getName().contains("R10-") &&
                                 file.getName().contains(".jar"))
                 .forEach(file -> {
                     boolean deleteExecutor = file.delete();
-                    if (deleteExecutor) Bukkit.getLogger().info("[R01] Success Remove LegacyPlugin");
-                    else Bukkit.getLogger().info("[R01] Fail to Remove");
+                    if (deleteExecutor) Bukkit.getLogger().info("[R10] Success Remove LegacyPlugin");
+                    else Bukkit.getLogger().info("[R10] Fail to Remove");
                 });
     }
 
     private void localPluginCheck() {
         this.fileList.stream()
-                .filter(file -> file.getName().contains("R01-") && file.getName().contains(".jar"))
+                .filter(file -> file.getName().contains("R10-") && file.getName().contains(".jar"))
                 .forEach(file -> localVersion = Double.parseDouble(
                         file.getName()
-                                .split("R01-")[1]
+                                .split("R10-")[1]
                                 .split(".jar")[0]
                 ));
     }
@@ -102,7 +102,7 @@ public class AutoUpdate {
     private void gitUpdateCheck() {
         try {
             String line;
-            URL url = new URL("https://github.com/JAXPLE/R01/releases/latest");
+            URL url = new URL("https://github.com/JAXPLE/R10/releases/latest");
             BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
 
             while ((line = br.readLine()) != null) {

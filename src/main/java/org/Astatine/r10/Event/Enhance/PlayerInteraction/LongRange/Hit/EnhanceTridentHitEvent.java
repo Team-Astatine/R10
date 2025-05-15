@@ -9,9 +9,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.Trident;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.inventory.ItemStack;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Event.Enhance.Interface.EnhanceUtil;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Event.Enhance.Interface.EnhanceUtil;
+import org.Astatine.r10.Event.EventRegister;
 
 public class EnhanceTridentHitEvent implements EventRegister {
     private Location tridentHitLocation;

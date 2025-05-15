@@ -2,7 +2,7 @@ package org.Astatine.r10.Event.RemoveHitDelay;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEvent;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Event.EventRegister;
 
 public class EntityAttackSpeedClear implements EventRegister {
 

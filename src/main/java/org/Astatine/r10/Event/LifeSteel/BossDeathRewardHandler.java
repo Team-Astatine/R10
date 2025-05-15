@@ -2,13 +2,13 @@ package org.Astatine.r10.Event.LifeSteel;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDeathEvent;
-import teamzesa.Data.User.UserKillStatus.UserKillStatus;
-import teamzesa.Data.User.UserKillStatus.UserKillStatusBuilder;
-import teamzesa.Data.User.UserKillStatus.UserKillStatusController;
-import teamzesa.Enumeration.Type.BossType;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.Event.EventRegister;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatus;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatusBuilder;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatusController;
+import org.Astatine.r10.Enumeration.Type.BossType;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.Event.EventRegister;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 public class BossDeathRewardHandler extends StringComponentExchanger implements EventRegister {
     private final UserKillStatusController userKillStatusController = new UserKillStatusController();

@@ -2,8 +2,8 @@ package org.Astatine.r10.Event.Enhance.Interface;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import teamzesa.Event.Enhance.Enumeration.Scroll.ProtectScrollList;
-import teamzesa.Event.Enhance.Enumeration.Scroll.ScrollList;
+import org.Astatine.r10.Event.Enhance.Enumeration.Scroll.ProtectScrollList;
+import org.Astatine.r10.Event.Enhance.Enumeration.Scroll.ScrollList;
 
 /**
  * 강화 주문서 아이템을 정의합니다.

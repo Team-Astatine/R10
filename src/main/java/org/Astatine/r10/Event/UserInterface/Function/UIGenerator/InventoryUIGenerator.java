@@ -5,8 +5,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
-import teamzesa.Event.UserInterface.Function.Interface.UIHolder;
-import teamzesa.Util.Function.StringComponentExchanger;
+import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
+import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 import java.util.List;
 

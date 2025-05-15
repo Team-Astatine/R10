@@ -7,8 +7,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Data.DataIO.Config.ConfigMenu;
-import teamzesa.Enumeration.Type.ColorType;
+import org.Astatine.r10.Data.DataIO.Config.ConfigMenu;
+import org.Astatine.r10.Enumeration.Type.ColorType;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

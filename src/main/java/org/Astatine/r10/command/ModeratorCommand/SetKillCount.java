@@ -7,12 +7,12 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import teamzesa.Data.User.UserData.User;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Data.User.UserKillStatus.UserKillStatusBuilder;
-import teamzesa.Enumeration.Type.ColorType;
-import teamzesa.command.CommandRegisterSection;
-import teamzesa.command.ListOfCommand;
+import org.Astatine.r10.Data.User.UserData.User;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatusBuilder;
+import org.Astatine.r10.Enumeration.Type.ColorType;
+import org.Astatine.r10.command.CommandRegisterSection;
+import org.Astatine.r10.command.ListOfCommand;
 
 import java.util.Optional;
 
@@ -72,7 +72,7 @@ public class SetKillCount extends CommandRegisterSection {
     private void sendComment(int setHealthValue) {
         String comment = this.targetPlayer.getName() + "님의 킬 카운트가 " + setHealthValue + "으로 설정됐습니다.";
         if (consoleSend) {
-            Bukkit.getLogger().info("[R01] " + comment);
+            Bukkit.getLogger().info("[R10] " + comment);
             return;
         }
 

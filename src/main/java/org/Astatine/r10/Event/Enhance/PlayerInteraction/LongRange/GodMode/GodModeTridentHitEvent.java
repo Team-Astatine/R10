@@ -5,8 +5,8 @@ import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Trident;
 import org.bukkit.event.entity.ProjectileHitEvent;
-import teamzesa.Data.User.UserData.UserController;
-import teamzesa.Event.EventRegister;
+import org.Astatine.r10.Data.User.UserData.UserController;
+import org.Astatine.r10.Event.EventRegister;
 
 
 public class GodModeTridentHitEvent implements EventRegister {

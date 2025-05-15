@@ -1,13 +1,13 @@
 package org.Astatine.r10.Event.LifeSteel;
 
 import io.papermc.paper.event.player.PlayerArmSwingEvent;
+import org.Astatine.r10.R10;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerAnimationType;
-import teamzesa.Event.EventRegister;
-import teamzesa.R01;
+import org.Astatine.r10.Event.EventRegister;
 
 
 public class DualWieldSwingHandler implements EventRegister {
@@ -37,7 +37,7 @@ public class DualWieldSwingHandler implements EventRegister {
             return;
 
         Bukkit.getScheduler().runTaskLater(
-                R01.getPlugin(R01.class),
+                R10.getPlugin(R10.class),
                 () -> this.event.getPlayer().swingOffHand(),
                 7L
         );

@@ -1,8 +1,8 @@
 package org.Astatine.r10.Event.Enhance.Interface;
 
 import org.bukkit.Material;
-import teamzesa.Event.Enhance.Enumeration.Weapon.LongRange;
-import teamzesa.Event.Enhance.Enumeration.Weapon.ShortRange;
+import org.Astatine.r10.Event.Enhance.Enumeration.Weapon.LongRange;
+import org.Astatine.r10.Event.Enhance.Enumeration.Weapon.ShortRange;
 
 /**
  * 강화 주문서 아이템을 정의합니다.
