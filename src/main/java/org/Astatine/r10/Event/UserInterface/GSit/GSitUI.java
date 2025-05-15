@@ -1,23 +1,21 @@
 package org.Astatine.r10.Event.UserInterface.GSit;
 
+import org.Astatine.r10.Event.UserInterface.Function.Executor.UIUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.Astatine.r10.Enumeration.Type.ColorType;
 import org.Astatine.r10.Event.UserInterface.Function.Interface.Type;
 import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
 import org.Astatine.r10.Event.UserInterface.Function.Interface.UIType;
-import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.CreatePanelItem;
 import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.InventoryUIGenerator;
 import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.SlotItemMapping;
-import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 import java.util.ArrayList;
 
 @UIType(Type.GSIT)
-public class GSitUI extends StringComponentExchanger implements UIHolder {
+public class GSitUI extends UIUtils implements UIHolder {
     private Player chestOwner;
     private Inventory inventory;
     private int slotCount;
@@ -57,69 +55,43 @@ public class GSitUI extends StringComponentExchanger implements UIHolder {
     }
 
     private ArrayList<SlotItemMapping> itemPanelList() {
-        ArrayList<SlotItemMapping> result = new ArrayList<>();
-        for (int i = 0; i < this.slotCount; i++)
-            result.add(new SlotItemMapping(
-                    i,
-                    createItem(
-                            Material.WHITE_STAINED_GLASS_PANE,
-                            "",
-                            ColorType.WHITE
-                    )
-                )
-            );
+        ArrayList<SlotItemMapping> result = new ArrayList<>(defaultPanelItems(this.slotCount));
 
         result.add(new SlotItemMapping(
                 1,
-                createButtonItem(
+                createItem(
                 Material.BRICK_STAIRS,
-                "앉기",
-                ColorType.ORANGE)
+                "앉기", ColorType.ORANGE,
+                true)
         ));
 
         result.add(new SlotItemMapping(
                 3,
-                createButtonItem(
+                createItem(
                 Material.RED_BED,
                 "눕기",
-                ColorType.ORANGE
-                )
+                ColorType.ORANGE,
+                true)
         ));
 
         result.add(new SlotItemMapping(
                 5,
-                createButtonItem(
+                createItem(
                 Material.TRIDENT,
                 "돌기",
-                ColorType.ORANGE
-                )
+                ColorType.ORANGE,
+                true)
         ));
 
         result.add(new SlotItemMapping(
                 7,
-                createButtonItem(
+                createItem(
                 Material.IRON_TRAPDOOR,
                 "기어가기",
-                ColorType.ORANGE
-        )
+                ColorType.ORANGE,
+                true)
         ));
 
         return result;
-    }
-
-    private ItemStack createItem(Material material, String comment, ColorType color) {
-        return new CreatePanelItem()
-                .setPanelItem(material)
-                .setDisplayName(comment, color)
-                .isEnchantGlowing(false)
-                .createItem();
-    }
-
-    private ItemStack createButtonItem(Material material, String comment, ColorType color) {
-        return new CreatePanelItem()
-                .setPanelItem(material)
-                .setDisplayName(comment, color)
-                .isEnchantGlowing(true)
-                .createItem();
     }
 }

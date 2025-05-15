@@ -59,7 +59,7 @@ import org.Astatine.r10.Event.Restricted.Function.Event.EntityExplode.Restricted
 import org.Astatine.r10.Event.Restricted.Function.Event.FromMaceHitDamage.RestrictedItemDamageFromMace;
 import org.Astatine.r10.Event.Restricted.Function.TotemStack.RestrictedShulkerChest;
 import org.Astatine.r10.Event.Restricted.Function.TotemStack.RestrictedStackingTotemInteraction;
-import org.Astatine.r10.Event.UserInterface.Function.UIEventSwitcher;
+import org.Astatine.r10.Event.UserInterface.Function.Executor.UIEventSwitcher;
 import org.Astatine.r10.Event.UserInterface.Menu.MainMenuUI;
 
 /**

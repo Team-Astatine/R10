@@ -1,4 +1,4 @@
-package org.Astatine.r10.Event.UserInterface.Function;
+package org.Astatine.r10.Event.UserInterface.Function.Executor;
 
 import org.Astatine.r10.Event.UserInterface.Enhance.EnhanceUICloseEvent;
 import org.Astatine.r10.Event.UserInterface.Enhance.EnhanceUIClickEvent;

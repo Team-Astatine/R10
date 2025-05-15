@@ -1,27 +1,25 @@
 package org.Astatine.r10.Event.UserInterface.Menu;
 
+import org.Astatine.r10.Event.UserInterface.Function.Executor.UIUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.SkullMeta;
 import org.jetbrains.annotations.NotNull;
 import org.Astatine.r10.Enumeration.Type.ColorType;
 import org.Astatine.r10.Event.EventRegister;
 import org.Astatine.r10.Event.UserInterface.Function.Interface.Type;
 import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
 import org.Astatine.r10.Event.UserInterface.Function.Interface.UIType;
-import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.CreatePanelItem;
 import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.InventoryUIGenerator;
 import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.SlotItemMapping;
-import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 import java.util.ArrayList;
 
 @UIType(Type.MAIN_MENU)
-public class MainMenuUI extends StringComponentExchanger implements EventRegister, UIHolder {
+public class MainMenuUI extends UIUtils implements EventRegister, UIHolder {
     private Player chestOwner;
     private Inventory inventory;
     private int slotCount;
@@ -71,35 +69,18 @@ public class MainMenuUI extends StringComponentExchanger implements EventRegiste
     }
 
     private ArrayList<SlotItemMapping> itemPanelList() {
-
-        ItemStack emerald = new ItemStack(Material.EMERALD);
-
-        ItemStack headItemStack = new ItemStack(Material.PLAYER_HEAD, 1);
-        SkullMeta data = (SkullMeta) headItemStack.getItemMeta();
-        data.setOwningPlayer(this.chestOwner);
-        headItemStack.setItemMeta(data);
-
-        ArrayList<SlotItemMapping> result = new ArrayList<>();
-        for (int i = 0; i < this.slotCount; i++)
-            result.add(new SlotItemMapping(
-                    i,
-                    createItem(
-                            Material.WHITE_STAINED_GLASS_PANE,
-                            "",
-                            ColorType.WHITE
-                    )));
+        ArrayList<SlotItemMapping> result = new ArrayList<>(defaultPanelItems(this.slotCount));
 
 //        result.add(new SlotItemMapping(0, item));
 //        result.add(new SlotItemMapping(1, item));
 //        result.add(new SlotItemMapping(9, item));
         result.add(new SlotItemMapping(
-                10,
-                createButtonItem(
-                        Material.ENDER_PEARL,
-                        "TPA 요청",
-                        ColorType.GREEN
-                ))
-        );
+            10,
+            createItem(
+                    Material.ENDER_PEARL,
+                    "TPA 요청", ColorType.GREEN,
+                    true)
+            ));
 
 //        result.add(new SlotItemMapping(3, item));
 //        result.add(new SlotItemMapping(4, item));
@@ -107,24 +88,23 @@ public class MainMenuUI extends StringComponentExchanger implements EventRegiste
 //        result.add(new SlotItemMapping(12, item));
         result.add(new SlotItemMapping(
                 13,
-                createButtonItem(
-                        Material.DIAMOND,
-                        "상점",
-                        ColorType.GRAY
-                ))
-        );
+                createItem(
+                        Material.CHEST_MINECART,
+                        "상점", ColorType.GRAY,
+                        true)
+        ));
 //        result.add(new SlotItemMapping(14, item));
 
 //        result.add(new SlotItemMapping(7, item));
 //        result.add(new SlotItemMapping(8, item));
+
         result.add(new SlotItemMapping(
                 16,
-                createButtonItem(
+                createItem(
                         Material.ANVIL,
-                        "강화",
-                        ColorType.RED
-                ))
-        );
+                        "강화", ColorType.RED,
+                        true)
+        ));
 //        result.add(new SlotItemMapping(17, item));
 
 
@@ -133,12 +113,11 @@ public class MainMenuUI extends StringComponentExchanger implements EventRegiste
 //        result.add(new SlotItemMapping(27, item));
         result.add(new SlotItemMapping(
                 28,
-                createButtonItem(
+                createItem(
                         Material.BARRIER,
-                        "준비중",
-                        ColorType.GRAY
-                ))
-        );
+                        "준비중", ColorType.GRAY,
+                        true)
+        ));
 
 //        result.add(new SlotItemMapping(21, item));
 //        result.add(new SlotItemMapping(22, item));
@@ -146,45 +125,27 @@ public class MainMenuUI extends StringComponentExchanger implements EventRegiste
 //        result.add(new SlotItemMapping(30, item));
         result.add(new SlotItemMapping(
                 31,
-                createButtonItem(
+                createItem(
                         Material.BARRIER,
-                        "준비중",
-                        ColorType.GRAY
-                ))
-        );
+                        "준비중", ColorType.GRAY,
+                        true)
+        ));
 //        result.add(new SlotItemMapping(32, item));
 
 //        result.add(new SlotItemMapping(25, item));
 //        result.add(new SlotItemMapping(26, item));
         result.add(new SlotItemMapping(
                 34,
-                createButtonItem(
+                createItem(
                         Material.COMMAND_BLOCK,
-                        "행동 상호작용",
-                        ColorType.PINK
-                ))
-        );
+                        "행동 상호작용", ColorType.PINK,
+                        true)
+        ));
 //        result.add(new SlotItemMapping(35, item));
 
-        result.add(new SlotItemMapping(36, emerald));
-        result.add(new SlotItemMapping(44, headItemStack));
+        result.add(new SlotItemMapping(36, new ItemStack(Material.EMERALD)));
+        result.add(new SlotItemMapping(44, getHeadItemStack(this.chestOwner)));
 
         return result;
-    }
-
-    private ItemStack createItem(Material material, String comment, ColorType color) {
-        return new CreatePanelItem()
-                .setPanelItem(material)
-                .setDisplayName(comment, color)
-                .isEnchantGlowing(false)
-                .createItem();
-    }
-
-    private ItemStack createButtonItem(Material material, String comment, ColorType color) {
-        return new CreatePanelItem()
-                .setPanelItem(material)
-                .setDisplayName(comment, color)
-                .isEnchantGlowing(true)
-                .createItem();
     }
 }
