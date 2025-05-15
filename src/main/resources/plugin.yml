@@ -1,0 +1,4 @@
+name: R10
+version: '1.0'
+main: org.Astatine.r10.R10
+api-version: '1.21'
