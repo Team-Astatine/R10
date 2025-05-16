@@ -23,6 +23,8 @@ import org.Astatine.r10.Data.User.UserKillStatus.UserKillStatusController;
 import org.Astatine.r10.command.ModeratorCommand.*;
 
 import java.util.EnumSet;
+import java.io.File;
+import java.io.IOException;
 
 public final class R10 extends JavaPlugin {
 
@@ -152,8 +154,20 @@ public final class R10 extends JavaPlugin {
 
     private void generationDataFile() {
         saveDefaultConfig(); // config Data
-        saveResource(DataFile.USER_DATA.getFileName(), false); // userData
-        saveResource(DataFile.KILL_STATUS.getFileName(), false); // killStatusData
+
+        for (DataFile df : new DataFile[]{DataFile.USER_DATA, DataFile.KILL_STATUS}) {
+            if (df.getFileInstance().exists())
+                continue;
+
+            File file = df.getFileInstance();
+            file.getParentFile().mkdirs();
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         Bukkit.getLogger().info(PLUGIN_NAME + " Plugin Data File 생성 완료.");
     }
 }

@@ -1,16 +1,14 @@
 package org.Astatine.r10.Data.DataIO.User;
 
-
-
 import org.Astatine.r10.R10;
 
 import java.io.File;
 
 public enum DataFile {
     CONFIG(new File(R10.getPlugin(R10.class).getDataFolder(), "config.yml"), "Config "),
-    USER_DATA(new File(R10.getPlugin(R10.class).getDataFolder(), "userData.json"), "User Data "),
-    KILL_STATUS(new File(R10.getPlugin(R10.class).getDataFolder(), "killStatus.json"), "Kill Status "),
-    USER_INVENTORY(new File(R10.getPlugin(R10.class).getDataFolder(), "userInventory.json"), "User Inventory "),
+    USER_DATA(new File(R10.getPlugin(R10.class).getDataFolder(), "DataResource/UserData.json"), "DataResource/User Data "),
+    KILL_STATUS(new File(R10.getPlugin(R10.class).getDataFolder(), "DataResource/KillStatus.json"), "DataResource/Kill Status "),
+    USER_INVENTORY(new File(R10.getPlugin(R10.class).getDataFolder(), "DataResource/UserInventory.json"), "DataResource/User Inventory "),
     ABSOLUTE_PATH(new File(R10.getPlugin(R10.class).getDataFolder().getParentFile().getAbsolutePath()), "Plugin Folder");
 
     private final File fileInstance;
