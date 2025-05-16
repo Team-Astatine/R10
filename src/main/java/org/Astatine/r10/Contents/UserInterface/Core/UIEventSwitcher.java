@@ -49,8 +49,7 @@ public class UIEventSwitcher {
 
         switch (event) {
             case InventoryClickEvent clickEvent ->
-                CLICK_HANDLERS.getOrDefault(typeAnnotation.value(),
-                        e -> {}).accept(clickEvent);
+                    CLICK_HANDLERS.get(typeAnnotation.value()).accept(clickEvent);
 
             case InventoryCloseEvent closeEvent ->
                     CLOSE_HANDLERS.getOrDefault(typeAnnotation.value(),
