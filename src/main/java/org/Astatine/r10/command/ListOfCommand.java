@@ -1,5 +1,6 @@
 package org.Astatine.r10.command;
 
+import org.Astatine.r10.R10;
 import org.Astatine.r10.Contents.UserInterface.Command.EnhanceTabOpen;
 import org.Astatine.r10.Contents.UserInterface.Command.GSitTabOpen;
 import org.Astatine.r10.Contents.UserInterface.Command.TpaTabOpen;
@@ -7,6 +8,7 @@ import org.Astatine.r10.command.ModeratorCommand.*;
 import org.Astatine.r10.command.UserCommand.Announce.*;
 import org.Astatine.r10.command.UserCommand.Function.*;
 import org.bukkit.command.CommandExecutor;
+
 
 /**
  * 명령어 추가 시 해당 Enumeration 에 추가합니다.
@@ -38,15 +40,15 @@ public enum ListOfCommand {
     COMMUNITY("커뮤니티", new Community()),
 
 //    Moderator
-    MOTD_SET("motd", new SetMotd()),
     EXPORT_DATA_FILE("ExportDataFile", new ExportAllData()),
-    REMOVE_DUPLICATE_USER_DATA("RemoveDuplicateData", new RemoveDuplicateUserNameData()),
-    HEALTH_SCALE_SET("setHealth", new SetHealth()),
-    GOD_MODE_SET("god", new SetGodMode()),
-    CONFIG_RELOAD("dataFileReload", new ConfigDataReload()),
     LOOK_USER_VALUE("vo", new LookUserValue()),
     LOOK_USER_MAIN_HAND_ITEM("vi", new LookUserMainHandItem()),
+    CONFIG_RELOAD("configDataFileReload", new ConfigDataReload()),
+    REMOVE_DUPLICATE_USER_DATA("RemoveDuplicateData", new RemoveDuplicateUserNameData()),
+    MOTD_SET("motd", new SetMotd()),
+    GOD_MODE_SET("god", new SetGodMode()),
     ENHANCE_SET("enhance", new SetEnhance()),
+    HEALTH_SCALE_SET("setHealth", new SetHealth()),
     KILL_COUNT_SET("setKillCount", new SetKillCount());
 
     private final String command;

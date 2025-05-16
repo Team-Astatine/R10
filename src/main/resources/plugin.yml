@@ -48,23 +48,8 @@ commands:
   커뮤니티:
     description: 커뮤니티 링크를 보여줍니다.
 
-  Motd:
-    description: Motd를 설정합니다.
-    permission: R10.DataControl
   ExportDataFile:
     description: R10프로젝트에 모든 Object가 Export 됩니다.
-    permission: R10.DataControl
-  RemoveDuplicateData:
-    description: UserData에 중복 이름을 삭제합니다.
-    permission: R10.DataControl
-  setHealth:
-    description: 체력을 초기화 합니다.
-    permission: R10.DataControl
-  god:
-    description: 무적을 활성화 합니다.
-    permission: R10.DataControl
-  dataFileReload:
-    description: config 을 Reload 합니다.
     permission: R10.DataControl
   vo:
     description: DebugValue
@@ -72,9 +57,24 @@ commands:
   vi:
     description: DebugItemValue
     permission: R10.ItemControl
+  configDataFileReload:
+    description: config 을 Reload 합니다.
+    permission: R10.DataControl
+  RemoveDuplicateData:
+    description: UserData에 중복 이름을 삭제합니다.
+    permission: R10.DataControl
+  motd:
+    description: Motd를 설정합니다.
+    permission: R10.DataControl
+  god:
+    description: 무적을 활성화 합니다.
+    permission: R10.DataControl
   enhance:
     description: 강화를 설정합니다.
     permission: R10.ItemControl
+  setHealth:
+    description: 체력을 초기화 합니다.
+    permission: R10.DataControl
   setKillCount:
     description: 킬 카운트를 설정합니다.
     permission: R10.ItemControl
