@@ -1,8 +1,8 @@
 package org.Astatine.r10.command;
 
-import org.Astatine.r10.Event.UserInterface.Command.EnhanceTabOpen;
-import org.Astatine.r10.Event.UserInterface.Command.GSitTabOpen;
-import org.Astatine.r10.Event.UserInterface.Command.TpaTabOpen;
+import org.Astatine.r10.Contents.UserInterface.Command.EnhanceTabOpen;
+import org.Astatine.r10.Contents.UserInterface.Command.GSitTabOpen;
+import org.Astatine.r10.Contents.UserInterface.Command.TpaTabOpen;
 import org.Astatine.r10.command.ModeratorCommand.*;
 import org.Astatine.r10.command.UserCommand.Announce.*;
 import org.Astatine.r10.command.UserCommand.Function.*;

@@ -1,0 +1,63 @@
+package org.Astatine.r10.Contents.UserInterface.Core;
+
+import org.Astatine.r10.Contents.UserInterface.Enhance.EnhanceUICloseEvent;
+import org.Astatine.r10.Contents.UserInterface.Enhance.EnhanceUIClickEvent;
+import org.Astatine.r10.Contents.UserInterface.Core.Interface.Type;
+import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIHolder;
+import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIType;
+import org.Astatine.r10.Contents.UserInterface.GSit.GSitUIClickEvent;
+import org.Astatine.r10.Contents.UserInterface.Menu.MainMenuUIClickEvent;
+import org.Astatine.r10.Contents.UserInterface.TPA.TpaUIClickEvent;
+import org.apache.commons.lang3.ObjectUtils;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.event.inventory.InventoryEvent;
+import java.util.Map;
+import java.util.function.Consumer;
+
+/**
+ * {@link UIEventSwitcher} 클래스는 {@link InventoryEvent}를 받아 {@link UIType} 어노테이션에 매핑된 핸들러로 분기 처리합니다.
+ * CLICK_HANDLERS: 각 UIType의 클릭 이벤트 처리 핸들러 맵 (Type → Consumer InventoryClickEvent)
+ * CLOSE_HANDLERS: 각 UIType의 닫기 이벤트 처리 핸들러 맵 (Type → Consumer InventoryCloseEvent)
+ */
+public class UIEventSwitcher {
+
+    private final Map<Type, Consumer<InventoryClickEvent>> CLICK_HANDLERS = Map.of(
+        Type.MAIN_MENU, MainMenuUIClickEvent::new,
+        Type.GSIT, GSitUIClickEvent::new,
+        Type.ENHANCE, EnhanceUIClickEvent::new,
+        Type.TPA, TpaUIClickEvent::new
+    );
+
+    private final Map<Type, Consumer<InventoryCloseEvent>> CLOSE_HANDLERS = Map.of(
+        Type.ENHANCE, EnhanceUICloseEvent::new
+    );
+
+    /**
+     * 주어진 {@link InventoryEvent}를 분석하여 {@link UIType} 값에 맞는 핸들러를 실행합니다.
+     *
+     * @param event 처리할 인벤토리 이벤트 (클릭 또는 닫기)
+     */
+    public UIEventSwitcher(InventoryEvent event) {
+
+        if (!(event.getView().getTopInventory().getHolder() instanceof UIHolder holder))
+            return;
+
+        UIType typeAnnotation = holder.getClass().getAnnotation(UIType.class);
+        if (ObjectUtils.isEmpty(typeAnnotation))
+            return;
+
+        switch (event) {
+            case InventoryClickEvent clickEvent ->
+                CLICK_HANDLERS.getOrDefault(typeAnnotation.value(),
+                        e -> {}).accept(clickEvent);
+
+            case InventoryCloseEvent closeEvent ->
+                    CLOSE_HANDLERS.getOrDefault(typeAnnotation.value(),
+                        e -> {}).accept(closeEvent);
+
+            default -> {}
+        }
+
+    }
+}

@@ -1,7 +1,7 @@
 package org.Astatine.r10;
 
-import org.Astatine.r10.Event.ListOfEvent;
-import org.Astatine.r10.Event.PlayerInteraction.Announce.Tip.Announcer;
+import org.Astatine.r10.Contents.ListOfEvent;
+import org.Astatine.r10.Contents.PlayerInteraction.Announce.Tip.Announcer;
 import org.Astatine.r10.Util.Function.ThreadPool;
 import org.Astatine.r10.command.ListOfCommand;
 import org.apache.commons.lang3.BooleanUtils;

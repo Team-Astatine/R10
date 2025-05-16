@@ -9,8 +9,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
 import org.Astatine.r10.Enumeration.Type.ColorType;
-import org.Astatine.r10.Event.Enhance.Enumeration.EnhanceItemAttributes;
-import org.Astatine.r10.Event.Enhance.Interface.EnhanceUtil;
+import org.Astatine.r10.Contents.Enhance.Enumeration.EnhanceItemAttributes;
+import org.Astatine.r10.Contents.Enhance.Interface.EnhanceUtil;
 import org.Astatine.r10.command.CommandRegisterSection;
 import org.Astatine.r10.command.ListOfCommand;
 

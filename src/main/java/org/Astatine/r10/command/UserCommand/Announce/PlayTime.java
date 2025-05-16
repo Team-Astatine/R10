@@ -1,6 +1,6 @@
 package org.Astatine.r10.command.UserCommand.Announce;
 
-import org.Astatine.r10.Event.PlayerInteraction.Announce.Tip.Announcer;
+import org.Astatine.r10.Contents.PlayerInteraction.Announce.Tip.Announcer;
 import org.Astatine.r10.command.CommandRegisterSection;
 import org.Astatine.r10.command.ListOfCommand;
 import org.bukkit.command.Command;
