@@ -16,8 +16,9 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 /**
- * {@link Type} 각 UI 타입에 맞는 {@link org.bukkit.inventory.Inventory}를 생성하는 클래스입니다.
- * {@link UIHolder} 를 구현한 클래스에 {@link UIType} 어노테이션을 붙여서 구현합니다.
+ * {@link UIEventSwitcher} 클래스는 {@link InventoryEvent}를 받아 {@link UIType} 어노테이션에 매핑된 핸들러로 분기 처리합니다.
+ * CLICK_HANDLERS: 각 UIType의 클릭 이벤트 처리 핸들러 맵 (Type → Consumer InventoryClickEvent)
+ * CLOSE_HANDLERS: 각 UIType의 닫기 이벤트 처리 핸들러 맵 (Type → Consumer InventoryCloseEvent)
  */
 public class UIEventSwitcher {
 
@@ -32,6 +33,11 @@ public class UIEventSwitcher {
         Type.ENHANCE, EnhanceUICloseEvent::new
     );
 
+    /**
+     * 주어진 {@link InventoryEvent}를 분석하여 {@link UIType} 값에 맞는 핸들러를 실행합니다.
+     *
+     * @param event 처리할 인벤토리 이벤트 (클릭 또는 닫기)
+     */
     public UIEventSwitcher(InventoryEvent event) {
 
         if (!(event.getView().getTopInventory().getHolder() instanceof UIHolder holder))
