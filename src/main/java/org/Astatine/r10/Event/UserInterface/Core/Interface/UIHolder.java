@@ -1,4 +1,4 @@
-package org.Astatine.r10.Event.UserInterface.Function.Interface;
+package org.Astatine.r10.Event.UserInterface.Core.Interface;
 
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.InventoryHolder;

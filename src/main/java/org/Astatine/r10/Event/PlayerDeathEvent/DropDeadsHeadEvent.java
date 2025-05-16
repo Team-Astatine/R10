@@ -1,6 +1,6 @@
 package org.Astatine.r10.Event.PlayerDeathEvent;
 
-import org.Astatine.r10.Event.UserInterface.Function.Executor.UIUtils;
+import org.Astatine.r10.Event.UserInterface.Core.UIUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.Astatine.r10.Event.EventRegister;

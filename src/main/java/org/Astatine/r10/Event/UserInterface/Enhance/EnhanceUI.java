@@ -1,6 +1,6 @@
 package org.Astatine.r10.Event.UserInterface.Enhance;
 
-import org.Astatine.r10.Event.UserInterface.Function.Executor.UIUtils;
+import org.Astatine.r10.Event.UserInterface.Core.UIUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
@@ -8,11 +8,11 @@ import org.bukkit.inventory.Inventory;
 import org.jetbrains.annotations.NotNull;
 import org.Astatine.r10.Data.DataIO.Config.ConfigIOHandler;
 import org.Astatine.r10.Enumeration.Type.ColorType;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.Type;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIType;
-import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.InventoryUIGenerator;
-import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.SlotItemMapping;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.Type;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIType;
+import org.Astatine.r10.Event.UserInterface.Core.UIGenerator.InventoryUIGenerator;
+import org.Astatine.r10.Event.UserInterface.Core.UIGenerator.SlotItemMapping;
 
 import java.util.Arrays;
 import java.util.List;

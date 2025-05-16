@@ -1,4 +1,4 @@
-package org.Astatine.r10.Event.UserInterface.Function.Interface;
+package org.Astatine.r10.Event.UserInterface.Core.Interface;
 
 public enum Type {
     MAIN_MENU,

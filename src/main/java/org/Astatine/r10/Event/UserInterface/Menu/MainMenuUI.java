@@ -1,6 +1,6 @@
 package org.Astatine.r10.Event.UserInterface.Menu;
 
-import org.Astatine.r10.Event.UserInterface.Function.Executor.UIUtils;
+import org.Astatine.r10.Event.UserInterface.Core.UIUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -10,11 +10,11 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.Astatine.r10.Enumeration.Type.ColorType;
 import org.Astatine.r10.Event.EventRegister;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.Type;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIType;
-import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.InventoryUIGenerator;
-import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.SlotItemMapping;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.Type;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIType;
+import org.Astatine.r10.Event.UserInterface.Core.UIGenerator.InventoryUIGenerator;
+import org.Astatine.r10.Event.UserInterface.Core.UIGenerator.SlotItemMapping;
 
 import java.util.ArrayList;
 

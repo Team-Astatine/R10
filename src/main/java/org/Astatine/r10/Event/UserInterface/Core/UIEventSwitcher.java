@@ -1,10 +1,10 @@
-package org.Astatine.r10.Event.UserInterface.Function.Executor;
+package org.Astatine.r10.Event.UserInterface.Core;
 
 import org.Astatine.r10.Event.UserInterface.Enhance.EnhanceUICloseEvent;
 import org.Astatine.r10.Event.UserInterface.Enhance.EnhanceUIClickEvent;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.Type;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIType;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.Type;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIType;
 import org.Astatine.r10.Event.UserInterface.GSit.GSitUIClickEvent;
 import org.Astatine.r10.Event.UserInterface.Menu.MainMenuUIClickEvent;
 import org.Astatine.r10.Event.UserInterface.TPA.TpaUIClickEvent;

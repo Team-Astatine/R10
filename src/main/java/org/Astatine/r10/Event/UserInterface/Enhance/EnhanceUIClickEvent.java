@@ -18,8 +18,8 @@ import org.Astatine.r10.Event.Enhance.Processor.EnhanceItem;
 import org.Astatine.r10.Event.Enhance.Processor.EnhanceItemBuilder;
 import org.Astatine.r10.Event.Enhance.Processor.EnhanceItemExecutor;
 import org.Astatine.r10.Event.EventRegister;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
-import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.InventoryUIGenerator;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Core.UIGenerator.InventoryUIGenerator;
 import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 import java.util.Arrays;

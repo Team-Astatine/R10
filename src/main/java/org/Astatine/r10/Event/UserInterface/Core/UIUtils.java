@@ -1,9 +1,9 @@
-package org.Astatine.r10.Event.UserInterface.Function.Executor;
+package org.Astatine.r10.Event.UserInterface.Core;
 
 import net.kyori.adventure.text.Component;
 import org.Astatine.r10.Enumeration.Type.ColorType;
-import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.CreatePanelItem;
-import org.Astatine.r10.Event.UserInterface.Function.UIGenerator.SlotItemMapping;
+import org.Astatine.r10.Event.UserInterface.Core.UIGenerator.CreatePanelItem;
+import org.Astatine.r10.Event.UserInterface.Core.UIGenerator.SlotItemMapping;
 import org.Astatine.r10.Util.Function.StringComponentExchanger;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

@@ -4,7 +4,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.Astatine.r10.Event.EventRegister;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIHolder;
 import org.Astatine.r10.Util.Function.StringComponentExchanger;
 import org.Astatine.r10.command.ListOfCommand;
 

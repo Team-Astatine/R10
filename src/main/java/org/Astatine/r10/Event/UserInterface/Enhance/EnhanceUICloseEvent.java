@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.ItemStack;
 import org.Astatine.r10.Event.EventRegister;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIHolder;
 
 import java.util.Arrays;
 import java.util.List;

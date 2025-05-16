@@ -1,4 +1,4 @@
-package org.Astatine.r10.Event.UserInterface.Function.UIGenerator;
+package org.Astatine.r10.Event.UserInterface.Core.UIGenerator;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;

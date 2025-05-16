@@ -1,4 +1,4 @@
-package org.Astatine.r10.Event.UserInterface.Function.Interface;
+package org.Astatine.r10.Event.UserInterface.Core.Interface;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.Astatine.r10.Event.EventRegister;
-import org.Astatine.r10.Event.UserInterface.Function.Interface.UIHolder;
+import org.Astatine.r10.Event.UserInterface.Core.Interface.UIHolder;
 import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 public class GSitUIClickEvent extends StringComponentExchanger implements EventRegister {
