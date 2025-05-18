@@ -1,5 +1,6 @@
 package org.Astatine.r10.command;
 
+import org.Astatine.r10.Contents.UserInterface.Command.HomeTabOpen;
 import org.Astatine.r10.R10;
 import org.Astatine.r10.Contents.UserInterface.Command.EnhanceTabOpen;
 import org.Astatine.r10.Contents.UserInterface.Command.GSitTabOpen;
@@ -33,6 +34,7 @@ public enum ListOfCommand {
     TIME("playtime", new PlayTime()),
     GSIT_TAB_OPEN("gsitTabOpen", new GSitTabOpen()),
     TPA_TAB_OPEN("tpaTabOpen", new TpaTabOpen()),
+    HOME_TAB_OPEN("homeTabOpen", new HomeTabOpen()),
     ENHANCE_TAB_OPEN("강화", new EnhanceTabOpen()),
     ANNOUNCING("공지", new ToggleAnnouncing()),
     COMMAND_TIP("명령어", new CommandTip()),

@@ -37,6 +37,8 @@ commands:
     description: Gsit 메뉴를 엽니다.
   tpaTabOpen:
     description: TPA 메뉴를 엽니다.
+  homeTabOpen:
+    description: Home 메뉴를 엽니다.
   강화:
     description: 강화창을 엽니다.
   공지:

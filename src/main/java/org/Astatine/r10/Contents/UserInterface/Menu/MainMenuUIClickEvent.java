@@ -40,13 +40,13 @@ public class MainMenuUIClickEvent extends UIUtils implements EventRegister {
 
         this.event.setCancelled(true);
         switch (this.event.getSlot()) {
-            case /*0,1,9,*/10 -> this.clickPlayer.performCommand("tpatabopen");
+            case /*0,1,9,*/10 -> this.clickPlayer.performCommand(ListOfCommand.TPA_TAB_OPEN.getCommand());
 
             case /*3,4,5,12,*/13/*,14*/ -> this.clickPlayer.performCommand("shop");
 
             case /*7,8,*/16/*,17*/ -> this.clickPlayer.performCommand(ListOfCommand.ENHANCE_TAB_OPEN.getCommand());
 
-//            case /*18,19,27,*/28 -> this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
+            case /*18,19,27,*/28 -> this.clickPlayer.performCommand(ListOfCommand.HOME_TAB_OPEN.getCommand());
 
 //            case /*21,22,23,30,*/31/*,32*/ -> this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
 
