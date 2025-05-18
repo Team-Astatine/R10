@@ -16,12 +16,12 @@ import org.Astatine.r10.command.ListOfCommand;
 import java.util.Optional;
 
 
-public class ConfigDataReload extends CommandRegisterSection {
+public class ReloadConfigData extends CommandRegisterSection {
 
     private Player player;
     private boolean consoleSend = false;
 
-    public ConfigDataReload() {
+    public ReloadConfigData() {
         super(ListOfCommand.CONFIG_RELOAD);
     }
 

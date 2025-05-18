@@ -15,9 +15,9 @@ import org.Astatine.r10.command.ListOfCommand;
 
 import java.util.Optional;
 
-public class LookUserValue extends CommandRegisterSection {
+public class GetUserValue extends CommandRegisterSection {
 
-    public LookUserValue() {
+    public GetUserValue() {
         super(ListOfCommand.LOOK_USER_VALUE);
     }
 

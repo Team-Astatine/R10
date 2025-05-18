@@ -41,9 +41,9 @@ public enum ListOfCommand {
 
 //    Moderator
     EXPORT_DATA_FILE("ExportDataFile", new ExportAllData()),
-    LOOK_USER_VALUE("vo", new LookUserValue()),
-    LOOK_USER_MAIN_HAND_ITEM("vi", new LookUserMainHandItem()),
-    CONFIG_RELOAD("configDataFileReload", new ConfigDataReload()),
+    LOOK_USER_VALUE("vo", new GetUserValue()),
+    LOOK_USER_MAIN_HAND_ITEM("vi", new GetUserMainHandItem()),
+    CONFIG_RELOAD("configDataFileReload", new ReloadConfigData()),
     REMOVE_DUPLICATE_USER_DATA("RemoveDuplicateData", new RemoveDuplicateUserNameData()),
     MOTD_SET("motd", new SetMotd()),
     GOD_MODE_SET("god", new SetGodMode()),

@@ -10,8 +10,8 @@ import org.Astatine.r10.command.CommandRegisterSection;
 import org.Astatine.r10.command.ListOfCommand;
 
 
-public class LookUserMainHandItem extends CommandRegisterSection {
-    public LookUserMainHandItem() {
+public class GetUserMainHandItem extends CommandRegisterSection {
+    public GetUserMainHandItem() {
         super(ListOfCommand.LOOK_USER_MAIN_HAND_ITEM);
     }
 

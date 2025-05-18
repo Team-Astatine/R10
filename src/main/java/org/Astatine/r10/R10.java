@@ -91,7 +91,7 @@ public final class R10 extends JavaPlugin {
 
     /**
      * Config File 을 모두 load 합니다.
-     * @see ConfigDataReload 시에 사용되는 함수입니다.
+     * @see ReloadConfigData 시에 사용되는 함수입니다.
      * 플러그인 실행 시 최초 1회 실행됩니다.
      */
     public void configFileLoader() {
