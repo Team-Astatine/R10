@@ -1,17 +1,13 @@
 package org.Astatine.r10.Contents.UserInterface.Menu;
 
 import net.kyori.adventure.text.Component;
-import org.Astatine.r10.Contents.PlayerInteraction.Announce.Tip.Announcer;
 import org.Astatine.r10.Contents.UserInterface.Core.UIUtils;
-import org.apache.commons.lang3.BooleanUtils;
 import org.bukkit.Material;
 import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.inventory.Inventory;
 import org.jetbrains.annotations.NotNull;
 import org.Astatine.r10.Enumeration.Type.ColorType;
-import org.Astatine.r10.Contents.EventRegister;
 import org.Astatine.r10.Contents.UserInterface.Core.Interface.Type;
 import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIHolder;
 import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIType;
@@ -24,24 +20,15 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
 @UIType(Type.MAIN_MENU)
-public class MainMenuUI extends UIUtils implements EventRegister, UIHolder {
+public class MainMenuUI extends UIUtils implements UIHolder {
     private Player chestOwner;
     private Inventory inventory;
     private int slotCount;
 
-    private final PlayerSwapHandItemsEvent event;
-
-    public MainMenuUI(PlayerSwapHandItemsEvent event) {
-        this.event = event;
-        this.chestOwner = this.event.getPlayer();
+    public MainMenuUI(Player player) {
+        this.chestOwner = player;
         this.slotCount = MINIUM_TAB_CNT * 6;
 
-        if (BooleanUtils.isFalse(getOwner().isSneaking()))
-            return;
-
-        this.event.setCancelled(true);
-        init();
-        execute();
         UIExecutor();
     }
 
@@ -56,18 +43,12 @@ public class MainMenuUI extends UIUtils implements EventRegister, UIHolder {
     }
 
     @Override
-    public void init() {}
-
-    @Override
-    public void execute() {}
-
-    @Override
     public void UIExecutor() {
         this.inventory = new InventoryUIGenerator()
                 .bindHolder(this)
                 .inventoryGenerator(
                         this.slotCount,
-                        componentExchanger("서버 메뉴", ColorType.YELLOW)
+                        componentExchanger("서버 메뉴", ColorType.NOTION_COLOR)
                 )
                 .setEnhanceUIItem(itemPanelList())
                 .executeUI();

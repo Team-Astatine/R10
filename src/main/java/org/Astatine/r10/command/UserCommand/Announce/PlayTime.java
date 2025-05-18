@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class PlayTime extends CommandRegisterSection {
 
     public PlayTime() {
-        super(ListOfCommand.TIME);
+        super(ListOfCommand.PLAY_TIME);
     }
 
     @Override

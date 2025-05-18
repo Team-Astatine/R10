@@ -4,6 +4,7 @@ import io.papermc.paper.event.player.AsyncChatEvent;
 import io.papermc.paper.event.player.PlayerArmSwingEvent;
 import io.papermc.paper.event.player.PlayerOpenSignEvent;
 import org.Astatine.r10.Contents.Restricted.AntiExploit.Interaction.PlayerInteraction.RestrictedCommandExecutorUsingInventory;
+import org.Astatine.r10.Contents.UserInterface.Command.MainMenu.MainMenuTabKeyBindOpen;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -61,7 +62,6 @@ import org.Astatine.r10.Contents.Restricted.Function.Event.DefendsDurabilityWith
 import org.Astatine.r10.Contents.Restricted.Function.TotemStack.RestrictedShulkerChest;
 import org.Astatine.r10.Contents.Restricted.Function.TotemStack.RestrictedStackingTotemInteraction;
 import org.Astatine.r10.Contents.UserInterface.Core.UIEventSwitcher;
-import org.Astatine.r10.Contents.UserInterface.Menu.MainMenuUI;
 
 /**
  * {@linkplain Listener}의 구현체를 관리합니다.
@@ -267,7 +267,7 @@ public class ListOfEvent implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void PlayerSwapHandItemsEvent(PlayerSwapHandItemsEvent event) {
-        new MainMenuUI(event);
+        new MainMenuTabKeyBindOpen(event);
     }
 
     @EventHandler(priority = EventPriority.LOWEST)

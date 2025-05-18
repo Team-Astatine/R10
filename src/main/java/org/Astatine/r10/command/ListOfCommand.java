@@ -1,10 +1,8 @@
 package org.Astatine.r10.command;
 
-import org.Astatine.r10.Contents.UserInterface.Command.HomeTabOpen;
+import org.Astatine.r10.Contents.UserInterface.Command.*;
+import org.Astatine.r10.Contents.UserInterface.Command.MainMenu.MainMenuTabCommandOpen;
 import org.Astatine.r10.R10;
-import org.Astatine.r10.Contents.UserInterface.Command.EnhanceTabOpen;
-import org.Astatine.r10.Contents.UserInterface.Command.GSitTabOpen;
-import org.Astatine.r10.Contents.UserInterface.Command.TpaTabOpen;
 import org.Astatine.r10.command.ModeratorCommand.*;
 import org.Astatine.r10.command.UserCommand.Announce.*;
 import org.Astatine.r10.command.UserCommand.Function.*;
@@ -24,6 +22,7 @@ import org.bukkit.command.CommandExecutor;
  */
 public enum ListOfCommand {
 //    User
+//    info
     ASTN("Astn", new TitleAstatine()),
     HELP("Help", new Help()),
     MODERATOR("moderator", new Moderator()),
@@ -31,7 +30,10 @@ public enum ListOfCommand {
     OFF_HAND_ITEM_SWAP_FOR_BE("swap", new OffHandItemSwapFunction()),
     TOTEM_STACKING("totem", new StackingTotemFunction()),
     FLY("fly", new ToggleFly()),
-    TIME("playtime", new PlayTime()),
+    PLAY_TIME("playtime", new PlayTime()),
+
+//    UI, TIPS
+    MAIN_MENU_TAB_OPEN("mainMenuTabOpen", new MainMenuTabCommandOpen()),
     GSIT_TAB_OPEN("gsitTabOpen", new GSitTabOpen()),
     TPA_TAB_OPEN("tpaTabOpen", new TpaTabOpen()),
     HOME_TAB_OPEN("homeTabOpen", new HomeTabOpen()),
@@ -41,12 +43,18 @@ public enum ListOfCommand {
     SERVER_TIP("서버팁", new ServerTip()),
     COMMUNITY("커뮤니티", new Community()),
 
+
 //    Moderator
+//    Data Export, Reload
     EXPORT_DATA_FILE("ExportDataFile", new ExportAllData()),
-    LOOK_USER_VALUE("vo", new GetUserValue()),
-    LOOK_USER_MAIN_HAND_ITEM("vi", new GetUserMainHandItem()),
     CONFIG_RELOAD("configDataFileReload", new ReloadConfigData()),
     REMOVE_DUPLICATE_USER_DATA("RemoveDuplicateData", new RemoveDuplicateUserNameData()),
+
+//    Check up Value
+    LOOK_USER_VALUE("vo", new GetUserValue()),
+    LOOK_USER_MAIN_HAND_ITEM("vi", new GetUserMainHandItem()),
+
+//        Status set
     MOTD_SET("motd", new SetMotd()),
     GOD_MODE_SET("god", new SetGodMode()),
     ENHANCE_SET("enhance", new SetEnhance()),
