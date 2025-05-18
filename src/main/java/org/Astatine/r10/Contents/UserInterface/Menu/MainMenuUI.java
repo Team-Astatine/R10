@@ -1,12 +1,14 @@
 package org.Astatine.r10.Contents.UserInterface.Menu;
 
+import net.kyori.adventure.text.Component;
+import org.Astatine.r10.Contents.PlayerInteraction.Announce.Tip.Announcer;
 import org.Astatine.r10.Contents.UserInterface.Core.UIUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.bukkit.Material;
+import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.Astatine.r10.Enumeration.Type.ColorType;
 import org.Astatine.r10.Contents.EventRegister;
@@ -17,6 +19,9 @@ import org.Astatine.r10.Contents.UserInterface.Core.UIGenerator.InventoryUIGener
 import org.Astatine.r10.Contents.UserInterface.Core.UIGenerator.SlotItemMapping;
 
 import java.util.ArrayList;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 
 @UIType(Type.MAIN_MENU)
 public class MainMenuUI extends UIUtils implements EventRegister, UIHolder {
@@ -31,7 +36,7 @@ public class MainMenuUI extends UIUtils implements EventRegister, UIHolder {
         this.chestOwner = this.event.getPlayer();
         this.slotCount = MINIUM_TAB_CNT * 6;
 
-        if (BooleanUtils.isFalse(this.chestOwner.isSneaking()))
+        if (BooleanUtils.isFalse(getOwner().isSneaking()))
             return;
 
         this.event.setCancelled(true);
@@ -143,9 +148,46 @@ public class MainMenuUI extends UIUtils implements EventRegister, UIHolder {
         ));
 //        result.add(new SlotItemMapping(35, item));
 
-        result.add(new SlotItemMapping(45, new ItemStack(Material.EMERALD)));
-        result.add(new SlotItemMapping(53, getHeadItemStack(this.chestOwner)));
+        result.add(new SlotItemMapping(
+                45,
+                createItem(
+                        Material.EMERALD,
+                        getPlayerBalance(),
+                        true)
+        ));
+
+        result.add(new SlotItemMapping(
+                53,
+                createItem(
+                        getHeadItemStack(getOwner()),
+                        getPlayerStatusInformation(),
+                        true)
+        ));
 
         return result;
+    }
+
+    private @NotNull Component getPlayerBalance() {
+        BigDecimal rawMoney = getEssentialPluginUserMoney(getOwner());
+
+        DecimalFormatSymbols formatSymbols = new DecimalFormatSymbols();
+        formatSymbols.setGroupingSeparator('.');
+
+        return componentExchanger(String.format("%s 달러", new DecimalFormat("#,###", formatSymbols)
+                .format(rawMoney)), ColorType.COMMAND_COLOR);
+    }
+
+    private @NotNull Component getPlayerStatusInformation() {
+        int ticks = getOwner().getStatistic(Statistic.PLAY_ONE_MINUTE);
+        long totalSeconds = ticks / 20L;
+        long hrs = totalSeconds / 3600;
+        long mins = (totalSeconds % 3600) / 60;
+        long secs = totalSeconds % 60;
+        String formatted = String.format("%02d시간 %02d분 %02d초", hrs, mins, secs);
+
+        return Component.text()
+                .append(componentExchanger(formatted, ColorType.PINK))
+                .append(componentExchanger(" 째 플레이 중!", ColorType.SKY_BLUE))
+                .build();
     }
 }
