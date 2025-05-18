@@ -18,8 +18,6 @@ import java.util.List;
 
 @UIType(Type.TPA)
 public class TpaUI extends UIUtils implements UIHolder {
-    private final int MINIUM_TAB_CNT = 9;
-
     private Player chestOwner;
     private Inventory inventory;
 

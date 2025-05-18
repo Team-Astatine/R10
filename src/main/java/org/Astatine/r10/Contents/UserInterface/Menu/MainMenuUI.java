@@ -29,7 +29,7 @@ public class MainMenuUI extends UIUtils implements EventRegister, UIHolder {
     public MainMenuUI(PlayerSwapHandItemsEvent event) {
         this.event = event;
         this.chestOwner = this.event.getPlayer();
-        this.slotCount = 45;
+        this.slotCount = MINIUM_TAB_CNT * 6;
 
         if (BooleanUtils.isFalse(this.chestOwner.isSneaking()))
             return;
@@ -114,8 +114,8 @@ public class MainMenuUI extends UIUtils implements EventRegister, UIHolder {
         result.add(new SlotItemMapping(
                 28,
                 createItem(
-                        Material.BARRIER,
-                        "준비중", ColorType.GRAY,
+                        Material.ACACIA_DOOR,
+                        "홈 세팅", ColorType.YELLOW,
                         true)
         ));
 
@@ -143,8 +143,8 @@ public class MainMenuUI extends UIUtils implements EventRegister, UIHolder {
         ));
 //        result.add(new SlotItemMapping(35, item));
 
-        result.add(new SlotItemMapping(36, new ItemStack(Material.EMERALD)));
-        result.add(new SlotItemMapping(44, getHeadItemStack(this.chestOwner)));
+        result.add(new SlotItemMapping(45, new ItemStack(Material.EMERALD)));
+        result.add(new SlotItemMapping(53, getHeadItemStack(this.chestOwner)));
 
         return result;
     }

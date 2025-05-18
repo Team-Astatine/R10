@@ -17,6 +17,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Collectors;
 
 public abstract class UIUtils extends StringComponentExchanger {
+    public final int MINIUM_TAB_CNT = 9;
 
     public ItemStack getHeadItemStack(Player player) {
         ItemStack headItemStack = new ItemStack(Material.PLAYER_HEAD);

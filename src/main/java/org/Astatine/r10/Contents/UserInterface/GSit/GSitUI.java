@@ -22,7 +22,7 @@ public class GSitUI extends UIUtils implements UIHolder {
 
     public GSitUI(Player player) {
         this.chestOwner = player;
-        this.slotCount = 9;
+        this.slotCount = MINIUM_TAB_CNT;
         UIExecutor();
     }
 
