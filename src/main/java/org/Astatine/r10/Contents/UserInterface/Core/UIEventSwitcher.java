@@ -1,19 +1,13 @@
 package org.Astatine.r10.Contents.UserInterface.Core;
 
-import org.Astatine.r10.Contents.UserInterface.Enhance.EnhanceUICloseEvent;
-import org.Astatine.r10.Contents.UserInterface.Enhance.EnhanceUIClickEvent;
-import org.Astatine.r10.Contents.UserInterface.Core.Interface.Type;
 import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIHolder;
 import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIType;
-import org.Astatine.r10.Contents.UserInterface.GSit.GSitUIClickEvent;
-import org.Astatine.r10.Contents.UserInterface.Menu.MainMenuUIClickEvent;
-import org.Astatine.r10.Contents.UserInterface.TPA.TpaUIClickEvent;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryEvent;
-import java.util.Map;
-import java.util.function.Consumer;
+
+import java.util.Optional;
 
 /**
  * {@link UIEventSwitcher} 클래스는 {@link InventoryEvent}를 받아 {@link UIType} 어노테이션에 매핑된 핸들러로 분기 처리합니다.
@@ -21,18 +15,6 @@ import java.util.function.Consumer;
  * CLOSE_HANDLERS: 각 UIType의 닫기 이벤트 처리 핸들러 맵 (Type → Consumer InventoryCloseEvent)
  */
 public class UIEventSwitcher {
-
-    private final Map<Type, Consumer<InventoryClickEvent>> CLICK_HANDLERS = Map.of(
-        Type.MAIN_MENU, MainMenuUIClickEvent::new,
-        Type.GSIT, GSitUIClickEvent::new,
-        Type.ENHANCE, EnhanceUIClickEvent::new,
-        Type.TPA, TpaUIClickEvent::new
-    );
-
-    private final Map<Type, Consumer<InventoryCloseEvent>> CLOSE_HANDLERS = Map.of(
-        Type.ENHANCE, EnhanceUICloseEvent::new
-    );
-
     /**
      * 주어진 {@link InventoryEvent}를 분석하여 {@link UIType} 값에 맞는 핸들러를 실행합니다.
      *
@@ -49,11 +31,14 @@ public class UIEventSwitcher {
 
         switch (event) {
             case InventoryClickEvent clickEvent ->
-                    CLICK_HANDLERS.get(typeAnnotation.value()).accept(clickEvent);
+                typeAnnotation.value().getEventConsumer().accept(clickEvent);
 
             case InventoryCloseEvent closeEvent ->
-                    CLOSE_HANDLERS.getOrDefault(typeAnnotation.value(),
-                        e -> {}).accept(closeEvent);
+                    Optional.ofNullable(typeAnnotation.value()
+                            .getCloseEventConsumer())
+                            .ifPresent(
+                    handler -> handler.accept(closeEvent)
+                );
 
             default -> {}
         }
