@@ -49,6 +49,10 @@ public abstract class UIUtils extends EssentialsUtil {
         return createItem(material, component, glowing, EMPTY_LORE);
     }
 
+    public ItemStack createItem(ItemStack itemStack, Component component, boolean glowing) {
+        return createItem(itemStack, component, glowing, EMPTY_LORE);
+    }
+
     public ItemStack createItem(Material material, String comment, ColorType color, boolean glowing, List<Component> lore) {
         return buildItem(
             new CreatePanelItem()
@@ -71,11 +75,21 @@ public abstract class UIUtils extends EssentialsUtil {
 
     public ItemStack createItem(Material material, Component component, boolean glowing, List<Component> lore) {
         return buildItem(
-            new CreatePanelItem()
-                .setPanelItem(material)
-                .setDisplayName(component),
-            glowing,
-            lore
+                new CreatePanelItem()
+                        .setPanelItem(material)
+                        .setDisplayName(component),
+                glowing,
+                lore
+        );
+    }
+
+    public ItemStack createItem(ItemStack itemStack, Component component, boolean glowing, List<Component> lore) {
+        return buildItem(
+                new CreatePanelItem()
+                        .setPanelItem(itemStack)
+                        .setDisplayName(component),
+                glowing,
+                lore
         );
     }
 
