@@ -3,7 +3,7 @@ package org.Astatine.r10.Contents;
 import io.papermc.paper.event.player.AsyncChatEvent;
 import io.papermc.paper.event.player.PlayerArmSwingEvent;
 import io.papermc.paper.event.player.PlayerOpenSignEvent;
-import org.Astatine.r10.Contents.Restricted.Function.Event.RestrictedCommandExecutorUsingInventory;
+import org.Astatine.r10.Contents.Restricted.AntiExploit.Interaction.PlayerInteraction.RestrictedCommandExecutorUsingInventory;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -57,7 +57,7 @@ import org.Astatine.r10.Contents.Restricted.AntiExploit.Interaction.PlayerIntera
 import org.Astatine.r10.Contents.Restricted.AntiExploit.Interaction.SignInteraction.RestrictedSignChangeInteraction;
 import org.Astatine.r10.Contents.Restricted.AntiExploit.Interaction.SignInteraction.RestrictedSignOpenInteraction;
 import org.Astatine.r10.Contents.Restricted.Function.Event.EntityExplode.RestrictedExplosiveDamageManager;
-import org.Astatine.r10.Contents.Restricted.Function.Event.FromMaceHitDamage.RestrictedItemDamageFromMace;
+import org.Astatine.r10.Contents.Restricted.Function.Event.DefendsDurabilityWithMace.RestrictedItemDamageFromMace;
 import org.Astatine.r10.Contents.Restricted.Function.TotemStack.RestrictedShulkerChest;
 import org.Astatine.r10.Contents.Restricted.Function.TotemStack.RestrictedStackingTotemInteraction;
 import org.Astatine.r10.Contents.UserInterface.Core.UIEventSwitcher;

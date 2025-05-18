@@ -1,4 +1,4 @@
-package org.Astatine.r10.Contents.Restricted.Function.Event.FromMaceHitDamage;
+package org.Astatine.r10.Contents.Restricted.Function.Event.DefendsDurabilityWithMace;
 
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.ObjectUtils;
