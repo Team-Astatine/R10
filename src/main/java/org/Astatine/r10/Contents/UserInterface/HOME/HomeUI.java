@@ -42,9 +42,9 @@ public class HomeUI extends UIUtils implements UIHolder {
     }
 
     private void init() {
-        IUser essPlayer = getEssentialPluginUserObject(this.chestOwner);
+        IUser essPlayer = getEssentialPluginUserObject(getOwner());
         this.playerHomes = essPlayer.getHomes();
-        this.slotCount = chestOwner.hasPermission("essentials.sethome.multiple.support")
+        this.slotCount = getOwner().hasPermission("essentials.sethome.multiple.support")
                     ? MINIUM_TAB_CNT * 2 // 타겟 플레이어 권한이 support일 경우
                     : MINIUM_TAB_CNT;    // 타겟 플레이어 권한이 default일 경우
     }

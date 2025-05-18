@@ -35,7 +35,7 @@ public class TpaUI extends UIUtils implements UIHolder {
         this.onlinePlayers = new ArrayList<>(Bukkit.getOnlinePlayers());
 //        Exclude the Chest Owner from the oneline player list
         this.onlinePlayers.removeIf(
-                targetPlayer -> targetPlayer.getName().equals(this.chestOwner.getName())
+                targetPlayer -> targetPlayer.getName().equals(getOwner().getName())
         );
     }
 
