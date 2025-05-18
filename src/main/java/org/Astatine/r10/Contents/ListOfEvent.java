@@ -3,6 +3,7 @@ package org.Astatine.r10.Contents;
 import io.papermc.paper.event.player.AsyncChatEvent;
 import io.papermc.paper.event.player.PlayerArmSwingEvent;
 import io.papermc.paper.event.player.PlayerOpenSignEvent;
+import org.Astatine.r10.Contents.Restricted.Function.Event.RestrictedCommandExecutorUsingInventory;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -255,6 +256,7 @@ public class ListOfEvent implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void PlayerCommandPreprocessEvent(PlayerCommandPreprocessEvent event) {
+        new RestrictedCommandExecutorUsingInventory(event);
         new RestrictedCommandInteraction(event);
     }
 
