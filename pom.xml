@@ -68,6 +68,7 @@
             <version>1.21.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+        <!--
         <dependency>
             <groupId>Vehicles</groupId>
             <artifactId>Vehicles</artifactId>
@@ -75,6 +76,7 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/Vehicles(14.8.6).jar</systemPath>
         </dependency>
+        -->
         <dependency>
             <groupId>EssentialsX</groupId>
             <artifactId>EssentialsX</artifactId>
