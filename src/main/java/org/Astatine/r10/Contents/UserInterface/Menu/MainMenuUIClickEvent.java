@@ -1,14 +1,14 @@
 package org.Astatine.r10.Contents.UserInterface.Menu;
 
+import org.Astatine.r10.Contents.UserInterface.Core.UIUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.Astatine.r10.Contents.EventRegister;
 import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIHolder;
-import org.Astatine.r10.Util.Function.StringComponentExchanger;
 import org.Astatine.r10.command.ListOfCommand;
 
-public class MainMenuUIClickEvent extends StringComponentExchanger implements EventRegister {
+public class MainMenuUIClickEvent extends UIUtils implements EventRegister {
     private UIHolder uiHolder;
     private Player clickPlayer;
 

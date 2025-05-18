@@ -1,5 +1,6 @@
 package org.Astatine.r10.Contents.UserInterface.Enhance;
 
+import org.Astatine.r10.Contents.UserInterface.Core.UIUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.Material;
@@ -20,13 +21,12 @@ import org.Astatine.r10.Contents.Enhance.Processor.EnhanceItemExecutor;
 import org.Astatine.r10.Contents.EventRegister;
 import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIHolder;
 import org.Astatine.r10.Contents.UserInterface.Core.UIGenerator.InventoryUIGenerator;
-import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
 import java.util.Arrays;
 import java.util.HashSet;
 
 
-public class EnhanceUIClickEvent extends StringComponentExchanger implements EventRegister {
+public class EnhanceUIClickEvent extends UIUtils implements EventRegister {
     private UIHolder uiHolder;
     private Player clickPlayer;
 

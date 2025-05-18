@@ -1,5 +1,6 @@
 package org.Astatine.r10.Contents.UserInterface.TPA;
 
+import org.Astatine.r10.Contents.UserInterface.Core.UIUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -8,9 +9,8 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.ItemStack;
 import org.Astatine.r10.Contents.EventRegister;
 import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIHolder;
-import org.Astatine.r10.Util.Function.StringComponentExchanger;
 
-public class TpaUIClickEvent extends StringComponentExchanger implements EventRegister {
+public class TpaUIClickEvent extends UIUtils implements EventRegister {
     private UIHolder uiHolder;
     private Player clickPlayer;
 
