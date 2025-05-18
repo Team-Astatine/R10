@@ -33,6 +33,12 @@ public class CreatePanelItem extends StringComponentExchanger {
         return this;
     }
 
+    public CreatePanelItem setDisplayName(Component displayName) {
+        this.resultItemMeta.displayName(displayName);
+        return this;
+    }
+
+
     public CreatePanelItem setDisplayName(String displayName, ColorType color) {
         this.resultItemMeta.displayName(componentExchanger(displayName, color));
         return this;

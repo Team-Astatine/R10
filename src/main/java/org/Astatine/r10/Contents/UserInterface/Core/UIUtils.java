@@ -1,13 +1,10 @@
 package org.Astatine.r10.Contents.UserInterface.Core;
 
-import net.ess3.api.IEssentials;
-import net.ess3.api.IUser;
 import net.kyori.adventure.text.Component;
 import org.Astatine.r10.Enumeration.Type.ColorType;
 import org.Astatine.r10.Contents.UserInterface.Core.UIGenerator.CreatePanelItem;
 import org.Astatine.r10.Contents.UserInterface.Core.UIGenerator.SlotItemMapping;
-import org.Astatine.r10.Util.Function.StringComponentExchanger;
-import org.bukkit.Bukkit;
+import org.Astatine.r10.Util.Function.EssentialsUtil;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -19,18 +16,9 @@ import java.util.Collections;
 import java.util.stream.IntStream;
 import java.util.stream.Collectors;
 
-public abstract class UIUtils extends StringComponentExchanger {
+public abstract class UIUtils extends EssentialsUtil {
+    private final List<Component> EMPTY_LORE = Collections.emptyList();
     public final int MINIUM_TAB_CNT = 9;
-
-    private IEssentials getEssentialsAPI() {
-        return (IEssentials) Bukkit.getServer()
-                .getPluginManager()
-                .getPlugin("Essentials");
-    }
-
-    public IUser getEssentialPluginUserObject(Player player) {
-        return getEssentialsAPI().getUser(player.getUniqueId());
-    }
 
     public void performCommand(Player player, String command, String targetName) {
         player.performCommand(String.format("%s %s", command, targetName));
@@ -54,24 +42,47 @@ public abstract class UIUtils extends StringComponentExchanger {
     }
 
     public ItemStack createItem(Material material, String comment, ColorType color, boolean glowing) {
-        return createItem(material, comment, color, glowing, Collections.emptyList());
+        return createItem(material, comment, color, glowing, EMPTY_LORE);
+    }
+
+    public ItemStack createItem(Material material, Component component, boolean glowing) {
+        return createItem(material, component, glowing, EMPTY_LORE);
     }
 
     public ItemStack createItem(Material material, String comment, ColorType color, boolean glowing, List<Component> lore) {
-        return new CreatePanelItem()
-            .setPanelItem(material)
-            .setDisplayName(comment, color)
-            .setLore(new ArrayList<>(lore))
-            .isEnchantGlowing(glowing)
-            .createItem();
+        return buildItem(
+            new CreatePanelItem()
+                .setPanelItem(material)
+                .setDisplayName(comment, color),
+            glowing,
+            lore
+        );
     }
 
     public ItemStack createItem(ItemStack targetItem, String comment, ColorType color, boolean glowing, List<Component> lore) {
-        return new CreatePanelItem()
+        return buildItem(
+            new CreatePanelItem()
                 .setPanelItem(targetItem)
-                .setDisplayName(comment, color)
-                .setLore(new ArrayList<>(lore))
-                .isEnchantGlowing(false)
-                .createItem();
+                .setDisplayName(comment, color),
+            glowing,
+            lore
+        );
+    }
+
+    public ItemStack createItem(Material material, Component component, boolean glowing, List<Component> lore) {
+        return buildItem(
+            new CreatePanelItem()
+                .setPanelItem(material)
+                .setDisplayName(component),
+            glowing,
+            lore
+        );
+    }
+
+    private ItemStack buildItem(CreatePanelItem builder, boolean glowing, List<Component> lore) {
+        return builder
+            .setLore(new ArrayList<>(lore))
+            .isEnchantGlowing(glowing)
+            .createItem();
     }
 }
