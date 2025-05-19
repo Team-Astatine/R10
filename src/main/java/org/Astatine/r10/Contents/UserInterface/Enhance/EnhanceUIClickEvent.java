@@ -6,9 +6,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.ItemStack;
-import org.Astatine.r10.Data.DataIO.Config.ConfigIOHandler;
 import org.Astatine.r10.Enumeration.Type.ColorType;
 import org.Astatine.r10.Contents.Enhance.Enumeration.Armour.ArmourList;
 import org.Astatine.r10.Contents.Enhance.Enumeration.Scroll.ProtectScrollList;
@@ -91,17 +89,7 @@ public class EnhanceUIClickEvent extends UIUtils implements EventRegister {
                 this.event.setCancelled(true);
             }
 
-            case 6 -> {
-                this.event.setCancelled(true);
-                this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
-                this.event.getWhoClicked().sendMessage(createLinkComponentExchanger(
-                        ConfigIOHandler.getConfigIOHandler().getDiscordInvite(),
-                        ConfigIOHandler.getConfigIOHandler().getDiscordConfig(),
-                        ColorType.DISCORD_COLOR
-                ));
-            }
-
-            case 7 -> {
+            case 6, 7, 8 -> {
                 this.event.setCancelled(true);
                 if (isAllowedEnhanceItem()) {
                     EnhanceItem enhanceItemObj = new EnhanceItemBuilder()
@@ -113,16 +101,6 @@ public class EnhanceUIClickEvent extends UIUtils implements EventRegister {
 
                     new EnhanceItemExecutor(enhanceItemObj);
                 }
-            }
-
-            case 8 -> {
-                this.event.setCancelled(true);
-                this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
-                this.event.getWhoClicked().sendMessage(createLinkComponentExchanger(
-                        ConfigIOHandler.getConfigIOHandler().getServerGuideNotion(),
-                        ConfigIOHandler.getConfigIOHandler().getNotionConfig(),
-                        ColorType.NOTION_COLOR
-                ));
             }
         }
     }

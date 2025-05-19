@@ -19,13 +19,6 @@ import java.util.List;
 
 @UIType(Type.ENHANCE)
 public class EnhanceUI extends UIUtils implements UIHolder {
-    // 슬롯 인덱스 상수 정의
-    private final int SLOT_WEAPON = 0;
-    private final int SLOT_SCROLL = 1;
-    private final int SLOT_PROTECT = 2;
-    private final int SLOT_DISCORD = 6;
-    private final int SLOT_EXECUTE = 7;
-    private final int SLOT_NOTION = 8;
 
     private Player chestOwner;
     private Inventory inventory;
@@ -51,7 +44,7 @@ public class EnhanceUI extends UIUtils implements UIHolder {
      * 해당 순서대로 Inventory index가 설정됩니다.
      * 0 1 2 - 🔪📜📜
      * 3 4 5
-     * 6 7 8 - 🟦🟥◻️
+     * 6 7 8 - 🟥🟥🟥
      *
      * 0 - 강화용 아이템을 넣는 가이드 무기를 표기합니다.
      * 1 - 강화 주문서를 넣는 가이드를 표기 합니다.
@@ -75,9 +68,9 @@ public class EnhanceUI extends UIUtils implements UIHolder {
     }
 
     private @NotNull List<SlotItemMapping> setSlotItemPannelList() {
-        return Arrays.asList(
+        List<SlotItemMapping> list = Arrays.asList(
                 new SlotItemMapping(
-                        SLOT_WEAPON,
+                        0,
                         createItem(
                             Material.NETHERITE_SWORD,
                             "강화할 아래슬롯에 무기를 올려주세요", ColorType.ORANGE,
@@ -85,7 +78,7 @@ public class EnhanceUI extends UIUtils implements UIHolder {
                 ),
 
                 new SlotItemMapping(
-                        SLOT_SCROLL,
+                        1,
                         createItem(
                             Material.ANVIL,
                             "아이템에 들어갈 재료를 아래슬롯에 넣어주세요", ColorType.ORANGE,
@@ -93,37 +86,24 @@ public class EnhanceUI extends UIUtils implements UIHolder {
                 ),
 
                 new SlotItemMapping(
-                        SLOT_PROTECT,
+                        2,
                         createItem(
                             Material.HEART_OF_THE_SEA,
                             "파괴방어 스크롤을 아래슬롯에 넣어주세요", ColorType.ORANGE,
                             true)
-                ),
-
-                new SlotItemMapping(
-                        SLOT_DISCORD,
-                        createItem(
-                            Material.LIGHT_BLUE_STAINED_GLASS_PANE,
-                            "디스코드 링크받기", ColorType.DISCORD_COLOR,
-                            true)
-                ),
-
-                new SlotItemMapping(
-                        SLOT_EXECUTE,
-                        createItem(
-                            Material.RED_STAINED_GLASS_PANE,
-                            "강화 실행", ColorType.RED,
-                            true)
-                ),
-
-                new SlotItemMapping(
-                        SLOT_NOTION,
-                        createItem(
-                            Material.LIGHT_GRAY_STAINED_GLASS_PANE,
-                            "강화법 확인하기",
-                            ColorType.NOTION_COLOR,
-                            true)
                 )
         );
+
+        for (int i  = 6; i < 9; i++) {
+            new SlotItemMapping(
+                    i,
+                    createItem(
+                        Material.RED_STAINED_GLASS_PANE,
+                        "강화 실행", ColorType.RED,
+                        true)
+            );
+        }
+
+        return list;
     }
 }

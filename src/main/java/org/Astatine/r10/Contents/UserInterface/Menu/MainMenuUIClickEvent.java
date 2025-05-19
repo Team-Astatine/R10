@@ -1,12 +1,15 @@
 package org.Astatine.r10.Contents.UserInterface.Menu;
 
 import org.Astatine.r10.Contents.UserInterface.Core.UIUtils;
+import org.Astatine.r10.Data.DataIO.Config.ConfigIOHandler;
+import org.Astatine.r10.Enumeration.Type.ColorType;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.Astatine.r10.Contents.EventRegister;
 import org.Astatine.r10.Contents.UserInterface.Core.Interface.UIHolder;
 import org.Astatine.r10.command.ListOfCommand;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 
 public class MainMenuUIClickEvent extends UIUtils implements EventRegister {
     private UIHolder uiHolder;
@@ -51,6 +54,22 @@ public class MainMenuUIClickEvent extends UIUtils implements EventRegister {
 //            case /*21,22,23,30,*/31/*,32*/ -> this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
 
             case /*25,26,*/34/*,35*/ -> this.clickPlayer.performCommand(ListOfCommand.GSIT_TAB_OPEN.getCommand());
+
+            case /*48, */49/*, 50*/ -> {
+                this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
+                this.event.getWhoClicked().sendMessage(createLinkComponentExchanger(
+                        ConfigIOHandler.getConfigIOHandler().getServerGuideNotion(),
+                        ConfigIOHandler.getConfigIOHandler().getNotionConfig(),
+                        ColorType.NOTION_COLOR));
+            }
+
+            case /*50, */51 -> {
+                this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
+                this.event.getWhoClicked().sendMessage(createLinkComponentExchanger(
+                        ConfigIOHandler.getConfigIOHandler().getDiscordInvite(),
+                        ConfigIOHandler.getConfigIOHandler().getDiscordConfig(),
+                        ColorType.DISCORD_COLOR));
+            }
         }
     }
 }

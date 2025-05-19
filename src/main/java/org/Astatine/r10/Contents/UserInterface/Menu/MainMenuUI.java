@@ -137,6 +137,25 @@ public class MainMenuUI extends UIUtils implements UIHolder {
                         true)
         ));
 
+//        result.add(new SlotItemMapping(48, item));
+        result.add(new SlotItemMapping(
+                49,
+                createItem(
+                        Material.LIGHT_GRAY_STAINED_GLASS_PANE,
+                        "서버 가이드 사이트 링크받기", ColorType.NOTION_COLOR,
+                        true)
+        ));
+//        result.add(new SlotItemMapping(50, item));
+
+        result.add(new SlotItemMapping(
+                51,
+                createItem(
+                        Material.LIGHT_BLUE_STAINED_GLASS_PANE,
+                        "디스코드 초대링크 받기", ColorType.DISCORD_COLOR,
+                        true)
+        ));
+//        result.add(new SlotItemMapping(52, item));
+
         result.add(new SlotItemMapping(
                 53,
                 createItem(
