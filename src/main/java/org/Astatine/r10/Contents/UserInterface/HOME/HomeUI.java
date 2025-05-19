@@ -79,8 +79,8 @@ public class HomeUI extends UIUtils implements UIHolder {
                     this.playerHomes.get(homeIndex++), ColorType.RED,
                     true,
                     new ArrayList<>(Arrays.asList(
-                            componentExchanger("왼쪽 클릭 : 해당 지점으로 이동", ColorType.YELLOW),
-                            componentExchanger("오른쪽 클릭 : 해당 지점 삭제", ColorType.YELLOW)
+                            componentExchanger("왼쪽 클릭 : 해당 지점으로 이동", ColorType.GREEN),
+                            componentExchanger("오른쪽 클릭 : 해당 지점 삭제", ColorType.WHITE_TO_RED5)
                     ))
                 ))
             );

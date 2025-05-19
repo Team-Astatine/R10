@@ -87,7 +87,7 @@ public class TpaUI extends UIUtils implements UIHolder {
                             false,
                             new ArrayList<>(Arrays.asList(
                                     componentExchanger("왼쪽 클릭 : TPA 요청", ColorType.YELLOW),
-                                    componentExchanger("오른쪽 클릭 : TPA HERE 요청", ColorType.YELLOW)
+                                    componentExchanger("오른쪽 클릭 : TPA HERE 요청", ColorType.WHITE_TO_RED5)
                             ))
                     )
             ));
