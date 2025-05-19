@@ -49,9 +49,10 @@ public class HomeUIClickEvent extends UIUtils implements EventRegister {
 
         switch (event.getClick()) {
             case ClickType.LEFT -> performCommand(this.clickPlayer, "home", homeName);
-            case ClickType.RIGHT -> {
+            case ClickType.SHIFT_LEFT -> {
                 performCommand(this.clickPlayer, "delhome", homeName);
 
+//                홈 삭제 후 화면 새로고침
                 if (essPlayer.getHomes().isEmpty())
                     this.clickPlayer.closeInventory(InventoryCloseEvent.Reason.PLUGIN);
                 else

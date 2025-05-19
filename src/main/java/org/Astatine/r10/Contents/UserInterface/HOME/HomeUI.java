@@ -80,7 +80,9 @@ public class HomeUI extends UIUtils implements UIHolder {
                     true,
                     new ArrayList<>(Arrays.asList(
                             componentExchanger("왼쪽 클릭 : 해당 지점으로 이동", ColorType.GREEN),
-                            componentExchanger("오른쪽 클릭 : 해당 지점 삭제", ColorType.WHITE_TO_RED5)
+                            componentExchanger("쉬프트 + 마우스 좌클릭 : 해당 지점 삭제", ColorType.WHITE_TO_RED5),
+                            componentExchanger("! 해당 지점 삭제 시 복구되지 않습니다.", ColorType.WHITE_TO_RED5),
+                            componentExchanger("! 신중히 삭제해주세요.", ColorType.WHITE_TO_RED5)
                     ))
                 ))
             );

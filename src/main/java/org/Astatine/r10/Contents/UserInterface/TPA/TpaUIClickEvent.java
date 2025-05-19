@@ -49,7 +49,7 @@ public class TpaUIClickEvent extends UIUtils implements EventRegister {
 
         switch (event.getClick()) {
             case ClickType.LEFT -> sendTPA("tpa", targetPlayerName);
-            case ClickType.RIGHT -> sendTPA("tpahere", targetPlayerName);
+            case ClickType.SHIFT_RIGHT -> sendTPA("tpahere", targetPlayerName);
         }
 
         this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);

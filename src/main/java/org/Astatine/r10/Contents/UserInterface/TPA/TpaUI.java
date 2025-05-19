@@ -87,7 +87,9 @@ public class TpaUI extends UIUtils implements UIHolder {
                             false,
                             new ArrayList<>(Arrays.asList(
                                     componentExchanger("왼쪽 클릭 : TPA 요청", ColorType.YELLOW),
-                                    componentExchanger("오른쪽 클릭 : TPA HERE 요청", ColorType.WHITE_TO_RED5)
+                                    componentExchanger("쉬프트 + 마우스 우클릭 : TPA HERE 요청", ColorType.WHITE_TO_RED5),
+                                    componentExchanger("! 상대방을 나에게 오게 만듭니다.", ColorType.WHITE_TO_RED5),
+                                    componentExchanger("! 상대방이 나에게 올 경우 위치가 노출될 수 있습니다.", ColorType.WHITE_TO_RED5)
                             ))
                     )
             ));
