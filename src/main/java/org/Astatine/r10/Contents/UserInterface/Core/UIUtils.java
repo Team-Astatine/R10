@@ -41,62 +41,62 @@ public abstract class UIUtils extends EssentialsUtil {
             .collect(Collectors.toList());
     }
 
-    public ItemStack createItem(Material material, String comment, ColorType color, boolean glowing) {
-        return createItem(material, comment, color, glowing, EMPTY_LORE);
+    public ItemStack createItem(Material material, String comment, ColorType color, boolean isItemGlowing) {
+        return createItem(material, comment, color, isItemGlowing, EMPTY_LORE);
     }
 
-    public ItemStack createItem(Material material, Component component, boolean glowing) {
-        return createItem(material, component, glowing, EMPTY_LORE);
+    public ItemStack createItem(Material material, Component component, boolean isItemGlowing) {
+        return createItem(material, component, isItemGlowing, EMPTY_LORE);
     }
 
-    public ItemStack createItem(ItemStack itemStack, Component component, boolean glowing) {
-        return createItem(itemStack, component, glowing, EMPTY_LORE);
+    public ItemStack createItem(ItemStack itemStack, Component component, boolean isItemGlowing) {
+        return createItem(itemStack, component, isItemGlowing, EMPTY_LORE);
     }
 
-    public ItemStack createItem(Material material, String comment, ColorType color, boolean glowing, List<Component> lore) {
+    public ItemStack createItem(Material material, String comment, ColorType color, boolean isItemGlowing, List<Component> lore) {
         return buildItem(
             new CreatePanelItem()
                 .setPanelItem(material)
                 .setDisplayName(comment, color),
-            glowing,
+                isItemGlowing,
             lore
         );
     }
 
-    public ItemStack createItem(ItemStack targetItem, String comment, ColorType color, boolean glowing, List<Component> lore) {
+    public ItemStack createItem(ItemStack targetItem, String comment, ColorType color, boolean isItemGlowing, List<Component> lore) {
         return buildItem(
             new CreatePanelItem()
                 .setPanelItem(targetItem)
                 .setDisplayName(comment, color),
-            glowing,
+                isItemGlowing,
             lore
         );
     }
 
-    public ItemStack createItem(Material material, Component component, boolean glowing, List<Component> lore) {
+    public ItemStack createItem(Material material, Component component, boolean isItemGlowing, List<Component> lore) {
         return buildItem(
                 new CreatePanelItem()
                         .setPanelItem(material)
                         .setDisplayName(component),
-                glowing,
+                isItemGlowing,
                 lore
         );
     }
 
-    public ItemStack createItem(ItemStack itemStack, Component component, boolean glowing, List<Component> lore) {
+    public ItemStack createItem(ItemStack itemStack, Component component, boolean isItemGlowing, List<Component> lore) {
         return buildItem(
                 new CreatePanelItem()
                         .setPanelItem(itemStack)
                         .setDisplayName(component),
-                glowing,
+                isItemGlowing,
                 lore
         );
     }
 
-    private ItemStack buildItem(CreatePanelItem builder, boolean glowing, List<Component> lore) {
+    private ItemStack buildItem(CreatePanelItem builder, boolean isItemGlowing, List<Component> lore) {
         return builder
             .setLore(new ArrayList<>(lore))
-            .isEnchantGlowing(glowing)
+            .isEnchantGlowing(isItemGlowing)
             .createItem();
     }
 }
