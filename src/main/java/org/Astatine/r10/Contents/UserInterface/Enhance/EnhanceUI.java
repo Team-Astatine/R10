@@ -94,14 +94,15 @@ public class EnhanceUI extends UIUtils implements UIHolder {
                 )
         );
 
-        for (int i  = 6; i < 9; i++) {
-            new SlotItemMapping(
+        for (int i = 6; i < 9; i++) {
+            list.add(
+                    new SlotItemMapping(
                     i,
                     createItem(
                         Material.RED_STAINED_GLASS_PANE,
                         "강화 실행", ColorType.RED,
                         true)
-            );
+            ));
         }
 
         return list;
