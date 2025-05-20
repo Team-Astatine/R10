@@ -3,7 +3,7 @@ package org.Astatine.r10.Contents.UserInterface.Core.Interface;
 import org.Astatine.r10.Contents.UserInterface.Enhance.EnhanceUIClickEvent;
 import org.Astatine.r10.Contents.UserInterface.Enhance.EnhanceUICloseEvent;
 import org.Astatine.r10.Contents.UserInterface.GSit.GSitUIClickEvent;
-import org.Astatine.r10.Contents.UserInterface.HOME.HomeUIClickEvent;
+import org.Astatine.r10.Contents.UserInterface.Home.HomeUIClickEvent;
 import org.Astatine.r10.Contents.UserInterface.Menu.MainMenuUIClickEvent;
 import org.Astatine.r10.Contents.UserInterface.TPA.TpaUIClickEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;

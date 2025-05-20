@@ -1,4 +1,4 @@
-package org.Astatine.r10.Contents.UserInterface.HOME;
+package org.Astatine.r10.Contents.UserInterface.Home;
 
 import net.ess3.api.IUser;
 import org.Astatine.r10.Contents.EventRegister;
