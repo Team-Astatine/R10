@@ -5,7 +5,7 @@ world_setting:
   discord: 'https://discord.com/invite/5UtVAMJUZe'
   notion: 'https://jaxple.notion.site/Astn-kr-e000a5d52aaa4611a63fd62629ea0f36?pvs=4'
 message:
-  commandHelp: '[/help] : /명령어, /서버팁, /커뮤니티'
+  commandHelp: '[/help]를 치시거나, Shift + F(Swap) 키를 누르면 메뉴가 열립니다!'
   commandCommunity: '/커뮤니티'
   mineListVote: '[클릭] > 마인리스트 추천'
   discordInvite: '[클릭] > 디스코드 참가'
