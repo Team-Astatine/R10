@@ -41,6 +41,8 @@ public class ConfigIOHandler extends StringComponentExchanger {
         getDiscordInvite();
         getServerGuideNotion();
         getTip();
+        getHeartTip();
+        getExtraHeartTip();
         getSteelLifeTip();
         getRaidTip();
         getWeaponTip();
@@ -103,6 +105,14 @@ public class ConfigIOHandler extends StringComponentExchanger {
 
     public String getTip() {
         return getString(ConfigMenu.MESSAGE_COMMAND_SERVER_TIP);
+    }
+
+    public String getHeartTip() {
+        return getString(ConfigMenu.HEART_TIP);
+    }
+
+    public String getExtraHeartTip() {
+        return getString(ConfigMenu.MESSAGE_EXTRA_HEART_TIP);
     }
 
     public String getSteelLifeTip() {

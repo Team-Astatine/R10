@@ -14,6 +14,8 @@ public enum ConfigMenu {
     MESSAGE_SERVER_GUIDE_NOTION("message.serverGuideNotion"),
 
     MESSAGE_COMMAND_SERVER_TIP("message.commandServerTip"),
+    HEART_TIP("message.heartTip"),
+    MESSAGE_EXTRA_HEART_TIP("message.extraHeartTip"),
     MESSAGE_STEEL_LIFE_TIP("message.steelLifeTip"),
     MESSAGE_RAID_TIP("message.raidTip"),
     MESSAGE_WEAPON_TIP("message.weaponTip"),

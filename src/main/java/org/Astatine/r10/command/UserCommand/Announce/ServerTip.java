@@ -22,6 +22,8 @@ public record ServerTip() implements CommandExecutor {
         TextColor commonColor = ColorType.RED.getTextColor();
 
         ArrayList<Component> serverTip = new ArrayList<>();
+        serverTip.add(Component.text(configIOHandler.getHeartTip(), commonColor));
+        serverTip.add(Component.text(configIOHandler.getExtraHeartTip(), commonColor));
         serverTip.add(Component.text(configIOHandler.getSteelLifeTip(), commonColor));
         serverTip.add(Component.text(configIOHandler.getRaidTip(), commonColor));
         serverTip.add(Component.text(configIOHandler.getWeaponTip(), commonColor));
