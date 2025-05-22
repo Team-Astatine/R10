@@ -15,7 +15,7 @@ public class Hat extends CommandRegisterSection {
     private PlayerInventory playerInventory;
 
     public Hat() {
-        super(ListOfCommand.ARMOUR_HEAD);
+        super(ListOfCommand.SWAP_HAT_TO_HAND);
     }
 
     @Override

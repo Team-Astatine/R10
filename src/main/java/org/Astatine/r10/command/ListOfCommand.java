@@ -25,19 +25,25 @@ public enum ListOfCommand {
 //    info
     ASTN("Astn", new TitleAstatine()),
     HELP("Help", new Help()),
-    MODERATOR("moderator", new Moderator()),
-    ARMOUR_HEAD("hat", new Hat()),
-    OFF_HAND_ITEM_SWAP_FOR_BE("swap", new OffHandItemSwapFunction()),
-    TOTEM_STACKING("totem", new StackingTotemFunction()),
-    FLY("fly", new ToggleFly()),
     PLAY_TIME("playtime", new PlayTime()),
 
-//    UI, TIPS
+//    Function
+    MODERATOR("moderator", new Moderator()),
+    SWAP_HAT_TO_HAND("hat", new Hat()),
+    SWAP_HAND_TO_OFFHAND("swap", new OffHandItemSwapFunction()),
+    TOTEM_STACKING("totem", new StackingTotemFunction()),
+    SHOW_OFF_STUFF("자랑하기", new ShowOffStuff()),
+    FLY("fly", new ToggleFly()),
+
+
+//    UI
     MAIN_MENU_TAB_OPEN("mainMenuTabOpen", new MainMenuTabCommandOpen()),
     GSIT_TAB_OPEN("gsitTabOpen", new GSitTabOpen()),
     TPA_TAB_OPEN("tpaTabOpen", new TpaTabOpen()),
     HOME_TAB_OPEN("homeTabOpen", new HomeTabOpen()),
     ENHANCE_TAB_OPEN("강화", new EnhanceTabOpen()),
+    
+//    Tips
     ANNOUNCING("공지", new ToggleAnnouncing()),
     COMMAND_TIP("명령어", new CommandTip()),
     SERVER_TIP("서버팁", new ServerTip()),
