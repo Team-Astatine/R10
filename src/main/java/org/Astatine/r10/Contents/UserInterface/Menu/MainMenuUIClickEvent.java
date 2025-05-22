@@ -55,19 +55,28 @@ public class MainMenuUIClickEvent extends UIUtils implements EventRegister {
 
             case /*25,26,*/34/*,35*/ -> this.clickPlayer.performCommand(ListOfCommand.GSIT_TAB_OPEN.getCommand());
 
+            case /*46,*/47 -> {
+                this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
+                this.event.getWhoClicked().sendMessage(createLinkComponentExchanger(
+                        ConfigIOHandler.getConfigIOHandler().getMinelistLinkComment(),
+                        ConfigIOHandler.getConfigIOHandler().getMinelistLink(),
+                        ColorType.GREEN));
+            }
+
+
             case /*48, */49/*, 50*/ -> {
                 this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
                 this.event.getWhoClicked().sendMessage(createLinkComponentExchanger(
-                        ConfigIOHandler.getConfigIOHandler().getServerGuideNotion(),
-                        ConfigIOHandler.getConfigIOHandler().getNotionConfig(),
+                        ConfigIOHandler.getConfigIOHandler().getNotionLinkComment(),
+                        ConfigIOHandler.getConfigIOHandler().getNotionLink(),
                         ColorType.NOTION_COLOR));
             }
 
             case /*50, */51 -> {
                 this.event.getWhoClicked().closeInventory(InventoryCloseEvent.Reason.PLUGIN);
                 this.event.getWhoClicked().sendMessage(createLinkComponentExchanger(
-                        ConfigIOHandler.getConfigIOHandler().getDiscordInvite(),
-                        ConfigIOHandler.getConfigIOHandler().getDiscordConfig(),
+                        ConfigIOHandler.getConfigIOHandler().getDiscordInviteComment(),
+                        ConfigIOHandler.getConfigIOHandler().getDiscordInviteLink(),
                         ColorType.DISCORD_COLOR));
             }
         }

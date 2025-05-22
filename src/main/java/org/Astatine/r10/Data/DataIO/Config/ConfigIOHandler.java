@@ -34,12 +34,12 @@ public class ConfigIOHandler extends StringComponentExchanger {
         setWorldSettingMotd();
         getHelp();
         getCommunityLink();
-        getMineListConfig();
-        getDiscordConfig();
-        getNotionConfig();
-        getMineListVote();
-        getDiscordInvite();
-        getServerGuideNotion();
+        getMinelistLink();
+        getDiscordInviteLink();
+        getNotionLink();
+        getMinelistLinkComment();
+        getDiscordInviteComment();
+        getNotionLinkComment();
         getTip();
         getHeartTip();
         getExtraHeartTip();
@@ -79,28 +79,28 @@ public class ConfigIOHandler extends StringComponentExchanger {
         return getString(ConfigMenu.MESSAGE_COMMAND_COMMUNITY);
     }
 
-    public String getMineListConfig() {
-        return getString(ConfigMenu.WORLD_SETTING_MINELIST);
+    public String getMinelistLink() {
+        return getString(ConfigMenu.LINK_SETTING_MINELIST_VOTE_SITE_LINK);
     }
 
-    public String getDiscordConfig() {
-        return getString(ConfigMenu.WORLD_SETTING_DISCORD);
+    public String getDiscordInviteLink() {
+        return getString(ConfigMenu.LINK_SETTING_DISCORD_INVITE_LINK);
     }
 
-    public String getNotionConfig() {
-        return getString(ConfigMenu.WORLD_SETTING_NOTION);
+    public String getNotionLink() {
+        return getString(ConfigMenu.LINK_SETTING_NOTION_SITE_LINK);
     }
 
-    public String getMineListVote() {
-        return getString(ConfigMenu.MESSAGE_MINELIST_VOTE);
+    public String getMinelistLinkComment() {
+        return getString(ConfigMenu.MESSAGE_MINELIST);
     }
 
-    public String getDiscordInvite() {
-        return getString(ConfigMenu.MESSAGE_DISCORD_INVITE);
+    public String getDiscordInviteComment() {
+        return getString(ConfigMenu.MESSAGE_DISCORD);
     }
 
-    public String getServerGuideNotion() {
-        return getString(ConfigMenu.MESSAGE_SERVER_GUIDE_NOTION);
+    public String getNotionLinkComment() {
+        return getString(ConfigMenu.MESSAGE_SERVER_NOTION);
     }
 
     public String getTip() {
