@@ -27,12 +27,12 @@ public class ExplosiveEvent implements EventRegister {
     public void execute() {
 //        TNT: 4 blocks
 //        Creeper:
-//        Normal: 3 blocks
-//        Charged: 6 blocks
+//        isNormal -> 3 blocks
+//        isCharged -< 6 blocks
 //        Ghast Fireball: 1 block
 //        Wither Skull:
-//        Blue Skull: 1 block
-//        Black Skull: Varies depending on difficulty
+//        isBlueSkull -> 1 block
+//        isBlackSkull -> Varies depending on difficulty
         switch (this.event.getEntityType()) {
             case CREEPER -> creeperBoom();
             case FIREBALL -> ghastBoom();
