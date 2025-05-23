@@ -1,6 +1,6 @@
 package org.Astatine.r10.Data.User.UserKillStatus;
 
-import org.Astatine.r10.Data.User.Interface.RObject;
+import org.Astatine.r10.Data.Interface.RObject;
 
 import java.util.UUID;
 

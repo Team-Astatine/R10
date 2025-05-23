@@ -1,6 +1,6 @@
 package org.Astatine.r10.Data.User.UserData;
 
-import org.Astatine.r10.Data.User.Interface.RObject;
+import org.Astatine.r10.Data.Interface.RObject;
 
 import java.util.HashSet;
 import java.util.List;
