@@ -17,6 +17,27 @@ permissions:
     default: op
 
 commands:
+  회사설립:
+    description: 회사를 생성합니다.
+  회사폐업:
+    description: 회사를 폐업합니다.
+  소속회사조회:
+    description: 소속된 회사를 조회합니다.
+  회사채용:
+    description: 회사를 채용합니다.
+  회사해고:
+    description: 회사를 해고합니다.
+  회사승진:
+    description: 회사를 승진합니다.
+  회사강등:
+    description: 회사를 강등합니다.
+  회사예치금입금:
+    description: 회사 예치금을 입금합니다.
+  회사자금출금:
+    description: 회사 자금을 출금합니다.
+  회사급여설정:
+    description: 회사 급여를 설정합니다.
+
   astn:
     description: Astn.kr 최신버전 무정부 야생약탈 서버
   help:
