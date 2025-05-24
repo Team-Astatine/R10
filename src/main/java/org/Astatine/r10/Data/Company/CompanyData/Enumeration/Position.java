@@ -4,5 +4,6 @@ public enum Position {
     ENTRY_LEVEL,
     MID_LEVEL,
     SENIOR_LEVEL,
-    EXECUTIVE_LEVEL
+    EXECUTIVE_LEVEL,
+    OWNER;
 }
