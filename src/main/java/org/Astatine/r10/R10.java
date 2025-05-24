@@ -2,6 +2,8 @@ package org.Astatine.r10;
 
 import org.Astatine.r10.Contents.ListOfEvent;
 import org.Astatine.r10.Contents.PlayerInteraction.Announce.Tip.Announcer;
+import org.Astatine.r10.Data.Company.CompanyData.Value.Company;
+import org.Astatine.r10.Data.Company.CompanyData.Value.CompanyController;
 import org.Astatine.r10.Util.Function.ThreadPool;
 import org.Astatine.r10.command.ListOfCommand;
 import org.apache.commons.lang3.BooleanUtils;
@@ -61,6 +63,10 @@ public final class R10 extends JavaPlugin {
                 DataFile.KILL_STATUS, new UserKillStatusController().getAllUserTable(), getClass().getName()
         );
 
+        new RObjectIOHandler().exportData(
+                DataFile.COMPANY, new CompanyController().getAllCompanies(), getClass().getName()
+        );
+
         ThreadPool.getThreadPool().allServiceOff();
         Bukkit.getScheduler().cancelTasks(this);
     }
@@ -86,6 +92,10 @@ public final class R10 extends JavaPlugin {
 
         new UserKillStatusController().updateAllUserData(
                 new RObjectIOHandler().importData(DataFile.KILL_STATUS, UserKillStatus.class, getClass().getName())
+        );
+
+        new CompanyController().updateAllCompanies(
+                new RObjectIOHandler().importData(DataFile.COMPANY, Company.class, getClass().getName())
         );
     }
 
@@ -135,6 +145,10 @@ public final class R10 extends JavaPlugin {
                             DataFile.KILL_STATUS, new UserKillStatusController().getAllUserTable(), getClass().getName()
                     );
 
+                    new RObjectIOHandler().exportData(
+                            DataFile.COMPANY, new CompanyController().getAllCompanies(), getClass().getName()
+                    );
+
 //                    new RObjectIOHandler().exportData(
 //                            DataFile.USER_INVENTORY, new UserIn().getAllUserTable(), getClass().getName()
 //                    );
@@ -155,7 +169,7 @@ public final class R10 extends JavaPlugin {
     private void generationDataFile() {
         saveDefaultConfig(); // config Data
 
-        for (DataFile df : new DataFile[]{DataFile.USER_DATA, DataFile.KILL_STATUS}) {
+        for (DataFile df : new DataFile[]{DataFile.USER_DATA, DataFile.KILL_STATUS, DataFile.COMPANY}) {
             if (df.getFileInstance().exists())
                 continue;
 

@@ -1,5 +1,7 @@
 package org.Astatine.r10.command.ModeratorCommand;
 
+import org.Astatine.r10.Data.Company.CompanyData.Value.CompanyController;
+import org.Astatine.r10.R10;
 import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -55,6 +57,10 @@ public class ExportAllData extends CommandRegisterSection {
 
         new RObjectIOHandler().exportData(
                 DataFile.KILL_STATUS, new UserKillStatusController().getAllUserTable(), getClass().getName()
+        );
+
+        new RObjectIOHandler().exportData(
+                DataFile.COMPANY, new CompanyController().getAllCompanies(), getClass().getName()
         );
 /*
         if (args == null || args[0].isEmpty()) {
