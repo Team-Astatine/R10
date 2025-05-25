@@ -1,5 +1,7 @@
 libs/
 target/
-/dependency-reduced-pom.xml
+.vscode/
+.gitignore
 .DS_Store
 .idea/libraries/Permanent_Script_Dependencies.xml
+/dependency-reduced-pom.xml
