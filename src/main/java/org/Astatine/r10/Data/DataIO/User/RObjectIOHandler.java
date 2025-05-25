@@ -3,7 +3,7 @@ package org.Astatine.r10.Data.DataIO.User;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import org.Astatine.r10.Data.User.Interface.RObject;
+import org.Astatine.r10.Data.Interface.RObject;
 import org.apache.commons.lang3.BooleanUtils;
 import org.bukkit.Bukkit;
 

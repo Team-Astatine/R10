@@ -1,19 +1,22 @@
 package org.Astatine.r10.Data.DataIO.Config;
 
 public enum ConfigMenu {
+    LINK_SETTING_MINELIST_VOTE_SITE_LINK("link_setting.minelist"),
+    LINK_SETTING_DISCORD_INVITE_LINK("link_setting.discord"),
+    LINK_SETTING_NOTION_SITE_LINK("link_setting.notion"),
+
     MESSAGE_COMMAND_HELP("message.commandHelp"),
 
     MESSAGE_COMMAND_COMMUNITY("message.commandCommunity"),
     WORLD_SETTING_MOTD("world_setting.motd"),
-    WORLD_SETTING_MINELIST("world_setting.minelist"),
-    WORLD_SETTING_DISCORD("world_setting.discord"),
-    WORLD_SETTING_NOTION("world_setting.notion"),
 
-    MESSAGE_MINELIST_VOTE("message.mineListVote"),
-    MESSAGE_DISCORD_INVITE("message.discordInvite"),
-    MESSAGE_SERVER_GUIDE_NOTION("message.serverGuideNotion"),
+    MESSAGE_MINELIST("message.mineListVote"),
+    MESSAGE_DISCORD("message.discordInvite"),
+    MESSAGE_SERVER_NOTION("message.serverGuideNotion"),
 
     MESSAGE_COMMAND_SERVER_TIP("message.commandServerTip"),
+    HEART_TIP("message.heartTip"),
+    MESSAGE_EXTRA_HEART_TIP("message.extraHeartTip"),
     MESSAGE_STEEL_LIFE_TIP("message.steelLifeTip"),
     MESSAGE_RAID_TIP("message.raidTip"),
     MESSAGE_WEAPON_TIP("message.weaponTip"),

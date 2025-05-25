@@ -91,19 +91,32 @@ public class EnhanceUI extends UIUtils implements UIHolder {
                             Material.HEART_OF_THE_SEA,
                             "파괴방어 스크롤을 아래슬롯에 넣어주세요", ColorType.ORANGE,
                             true)
+                ),
+
+                new SlotItemMapping(
+                        6,
+                        createItem(
+                                Material.RED_STAINED_GLASS_PANE,
+                                "강화 실행", ColorType.RED,
+                                true)
+                ),
+
+                new SlotItemMapping(
+                        7,
+                        createItem(
+                                Material.RED_STAINED_GLASS_PANE,
+                                "강화 실행", ColorType.RED,
+                                true)
+                ),
+
+                new SlotItemMapping(
+                        8,
+                        createItem(
+                                Material.RED_STAINED_GLASS_PANE,
+                                "강화 실행", ColorType.RED,
+                                true)
                 )
         );
-
-        for (int i = 6; i < 9; i++) {
-            list.add(
-                    new SlotItemMapping(
-                    i,
-                    createItem(
-                        Material.RED_STAINED_GLASS_PANE,
-                        "강화 실행", ColorType.RED,
-                        true)
-            ));
-        }
 
         return list;
     }

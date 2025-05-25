@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class OffHandItemSwapFunction extends CommandRegisterSection {
 
     public OffHandItemSwapFunction() {
-        super(ListOfCommand.OFF_HAND_ITEM_SWAP_FOR_BE);
+        super(ListOfCommand.SWAP_HAND_TO_OFFHAND);
     }
 
     @Override

@@ -20,28 +20,28 @@ public record Community() implements CommandExecutor {
 
         ConfigIOHandler configIOHandler = ConfigIOHandler.getConfigIOHandler();
 
-        String notionLink = configIOHandler.getNotionConfig();
-        String discordLink = configIOHandler.getDiscordConfig();
-        String mineListLink = configIOHandler.getMineListConfig();
+        String notionLink = configIOHandler.getNotionLink();
+        String discordLink = configIOHandler.getDiscordInviteLink();
+        String mineListLink = configIOHandler.getMinelistLink();
 
         TextColor notionColor = ColorType.NOTION_COLOR.getTextColor();
         TextColor discordColor = ColorType.DISCORD_COLOR.getTextColor();
         TextColor mineListColor = ColorType.GREEN.getTextColor();
 
         commandSender.sendMessage(
-                Component.text(configIOHandler.getMineListVote())
+                Component.text(configIOHandler.getMinelistLinkComment())
                         .color(mineListColor)
                         .clickEvent(ClickEvent.openUrl(mineListLink))
         );
 
         commandSender.sendMessage(
-                Component.text(configIOHandler.getDiscordInvite())
+                Component.text(configIOHandler.getDiscordInviteComment())
                         .color(discordColor)
                         .clickEvent(ClickEvent.openUrl(discordLink))
         );
 
         commandSender.sendMessage(
-                Component.text(configIOHandler.getServerGuideNotion())
+                Component.text(configIOHandler.getNotionLinkComment())
                         .color(notionColor)
                         .clickEvent(ClickEvent.openUrl(notionLink))
         );
