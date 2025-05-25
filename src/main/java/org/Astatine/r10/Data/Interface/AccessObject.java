@@ -1,4 +1,4 @@
-package org.Astatine.r10.Data.User.Interface;
+package org.Astatine.r10.Data.Interface;
 
 public interface AccessObject<K, E> {
 

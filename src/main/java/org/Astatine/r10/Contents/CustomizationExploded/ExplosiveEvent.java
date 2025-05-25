@@ -1,5 +1,7 @@
 package org.Astatine.r10.Contents.CustomizationExploded;
 
+import org.Astatine.r10.R10;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.WitherSkull;
@@ -25,12 +27,12 @@ public class ExplosiveEvent implements EventRegister {
     public void execute() {
 //        TNT: 4 blocks
 //        Creeper:
-//        Normal: 3 blocks
-//        Charged: 6 blocks
+//        isNormal -> 3 blocks
+//        isCharged -< 6 blocks
 //        Ghast Fireball: 1 block
 //        Wither Skull:
-//        Blue Skull: 1 block
-//        Black Skull: Varies depending on difficulty
+//        isBlueSkull -> 1 block
+//        isBlackSkull -> Varies depending on difficulty
         switch (this.event.getEntityType()) {
             case CREEPER -> creeperBoom();
             case FIREBALL -> ghastBoom();
@@ -45,32 +47,34 @@ public class ExplosiveEvent implements EventRegister {
     private void creeperBoom() {
         Creeper creeper = (Creeper) this.event.getEntity();
         int explosiveRadius = creeper.isPowered() ? 100 : 5;
-        this.location.createExplosion(explosiveRadius, true);
+        taskExecute(explosiveRadius);
     }
 
     private void ghastBoom() {
-        this.location.createExplosion(3, true);
+        taskExecute(3);
     }
 
     private void witherBoom() {
         WitherSkull witherSkull = (WitherSkull) this.event.getEntity();
         int explosiveRadius = witherSkull.isCharged() ? 130 : 40;
-        this.location.createExplosion(explosiveRadius, true);
+        taskExecute(explosiveRadius);
     }
 
     private void boomBer() {
-        this.location.createExplosion(15, true);
+        taskExecute(15);
     }
 
     private void cartBoom() {
-        Runnable tntCartTask = () -> this.location.createExplosion(25, true);
-        tntCartTask.run();
+        taskExecute(25);
     }
 
     private void endCrystal() {
-        Runnable crystalTask = () -> {
-            this.location.createExplosion(15, true);
-        };
-        crystalTask.run();
+        taskExecute(15);
+    }
+
+    private void taskExecute(int explosiveRadius) {
+        Bukkit.getScheduler().runTask(R10.getPlugin(R10.class), () -> {
+            this.location.createExplosion(explosiveRadius, true);
+        });
     }
 }

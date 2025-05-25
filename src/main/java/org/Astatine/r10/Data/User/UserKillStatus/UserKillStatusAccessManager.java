@@ -1,6 +1,6 @@
 package org.Astatine.r10.Data.User.UserKillStatus;
 
-import org.Astatine.r10.Data.User.Interface.AccessObject;
+import org.Astatine.r10.Data.Interface.AccessObject;
 import org.Astatine.r10.Data.User.UserDataCacheHolder;
 
 import java.util.UUID;

@@ -3,6 +3,7 @@ package org.Astatine.r10.command;
 import org.Astatine.r10.Contents.UserInterface.Command.*;
 import org.Astatine.r10.Contents.UserInterface.Command.MainMenu.MainMenuTabCommandOpen;
 import org.Astatine.r10.R10;
+import org.Astatine.r10.command.Company.UserCommand.*;
 import org.Astatine.r10.command.ModeratorCommand.*;
 import org.Astatine.r10.command.UserCommand.Announce.*;
 import org.Astatine.r10.command.UserCommand.Function.*;
@@ -21,23 +22,46 @@ import org.bukkit.command.CommandExecutor;
  * @implSpec {@link R10} 에 registerCommandAndEvent() 함수에서 명령어를 일괄 등록합니다.
  */
 public enum ListOfCommand {
+//    Company
+    CREATE_COMPANY("회사설립", new CreateCompany()),
+    CLOSE_COMPANY("회사폐업", new CloseCompany()),
+
+    PROPERTY_COMPANY("소속회사조회", new CompanyProperty()),
+
+    RECRUIT_EMPLOYEE("회사채용", new RecruitEmployee()),
+    DISMISS_EMPLOYEE("회사해고", new DismissEmployee()),
+    PROMOTE_EMPLOYEE("회사승진", new PromoteEmployee()),
+    DEMOTE_EMPLOYEE("회사강등", new DemoteEmployee()),
+
+    DEPOSIT_COMPANY("회사예치금입금", new DepositCompany()),
+    WITHDRAW_COMPANY("회사자금출금", new WithdrawCompany()),
+
+    SET_SALARY("회사급여설정", new SetSalary()),
+
+
 //    User
 //    info
     ASTN("Astn", new TitleAstatine()),
     HELP("Help", new Help()),
-    MODERATOR("moderator", new Moderator()),
-    ARMOUR_HEAD("hat", new Hat()),
-    OFF_HAND_ITEM_SWAP_FOR_BE("swap", new OffHandItemSwapFunction()),
-    TOTEM_STACKING("totem", new StackingTotemFunction()),
-    FLY("fly", new ToggleFly()),
     PLAY_TIME("playtime", new PlayTime()),
 
-//    UI, TIPS
+//    Function
+    MODERATOR("moderator", new Moderator()),
+    SWAP_HAT_TO_HAND("hat", new Hat()),
+    SWAP_HAND_TO_OFFHAND("swap", new OffHandItemSwapFunction()),
+    TOTEM_STACKING("totem", new StackingTotemFunction()),
+    SHOW_OFF_STUFF("자랑하기", new ShowOffStuff()),
+    FLY("fly", new ToggleFly()),
+
+
+//    UI
     MAIN_MENU_TAB_OPEN("mainMenuTabOpen", new MainMenuTabCommandOpen()),
     GSIT_TAB_OPEN("gsitTabOpen", new GSitTabOpen()),
     TPA_TAB_OPEN("tpaTabOpen", new TpaTabOpen()),
     HOME_TAB_OPEN("homeTabOpen", new HomeTabOpen()),
     ENHANCE_TAB_OPEN("강화", new EnhanceTabOpen()),
+
+//    Tips
     ANNOUNCING("공지", new ToggleAnnouncing()),
     COMMAND_TIP("명령어", new CommandTip()),
     SERVER_TIP("서버팁", new ServerTip()),
